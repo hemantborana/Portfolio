@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,70 +19,89 @@
             background-color: rgb(17 24 39 / var(--tw-bg-opacity));
             color: rgb(229 231 235 / var(--tw-text-opacity));
         }
-        
+
         .dark .bg-white {
             background-color: rgb(31 41 55 / var(--tw-bg-opacity));
         }
-        
+
         .dark .bg-gray-50 {
             background-color: rgb(17 24 39 / var(--tw-bg-opacity));
         }
-        
-        .dark .text-gray-600, .dark .text-gray-800 {
+
+        .dark .text-gray-600,
+        .dark .text-gray-800 {
             color: rgb(209 213 219 / var(--tw-text-opacity));
         }
-        
+
         .dark .bg-blue-50 {
             background-color: rgb(30 58 138 / 0.2);
         }
-        
+
         /* Custom CSS for animations */
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        
+
         .fade-in {
             animation: fadeIn 1s ease-out forwards;
         }
-        
-        .delay-1 { animation-delay: 0.2s; }
-        .delay-2 { animation-delay: 0.4s; }
-        .delay-3 { animation-delay: 0.6s; }
-        .delay-4 { animation-delay: 0.8s; }
-        
+
+        .delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.6s;
+        }
+
+        .delay-4 {
+            animation-delay: 0.8s;
+        }
+
         /* Custom scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
         }
-        
+
         ::-webkit-scrollbar-track {
             background: #f1f1f1;
         }
-        
+
         ::-webkit-scrollbar-thumb {
             background: #3b82f6;
             border-radius: 4px;
         }
-        
+
         /* Project card hover effect */
         .project-card {
             transition: all 0.3s ease;
         }
-        
+
         .project-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
-        
+
         /* Active nav link */
         .nav-link.active {
             color: #3b82f6;
             font-weight: 600;
         }
-        
     </style>
 </head>
+
 <body class="bg-gray-50 font-sans text-gray-800">
     <!-- Navigation -->
     <nav class="fixed w-full bg-white shadow-sm z-50">
@@ -91,7 +111,8 @@
                     <span class="text-xl font-bold text-blue-600">Hemant Borana</span>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <button id="theme-toggle" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">
+                    <button id="theme-toggle"
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">
                         <i class="fas fa-moon dark:hidden"></i>
                         <i class="fas fa-sun hidden dark:block"></i>
                     </button>
@@ -99,7 +120,8 @@
                     <a href="#about" class="nav-link text-sm font-medium hover:text-blue-600 transition">About</a>
                     <a href="#skills" class="nav-link text-sm font-medium hover:text-blue-600 transition">Skills</a>
                     <a href="#projects" class="nav-link text-sm font-medium hover:text-blue-600 transition">Projects</a>
-                    <a href="#education" class="nav-link text-sm font-medium hover:text-blue-600 transition">Education</a>
+                    <a href="#education"
+                        class="nav-link text-sm font-medium hover:text-blue-600 transition">Education</a>
                     <a href="#contact" class="nav-link text-sm font-medium hover:text-blue-600 transition">Contact</a>
                 </div>
                 <div class="md:hidden flex items-center">
@@ -109,37 +131,54 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Mobile menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#home" class="nav-link active block px-3 py-2 rounded-md text-base font-medium hover:text-blue-600 hover:bg-gray-50">Home</a>
-                <a href="#about" class="nav-link block px-3 py-2 rounded-md text-base font-medium hover:text-blue-600 hover:bg-gray-50">About</a>
-                <a href="#skills" class="nav-link block px-3 py-2 rounded-md text-base font-medium hover:text-blue-600 hover:bg-gray-50">Skills</a>
-                <a href="#projects" class="nav-link block px-3 py-2 rounded-md text-base font-medium hover:text-blue-600 hover:bg-gray-50">Projects</a>
-                <a href="#education" class="nav-link block px-3 py-2 rounded-md text-base font-medium hover:text-blue-600 hover:bg-gray-50">Education</a>
-                <a href="#contact" class="nav-link block px-3 py-2 rounded-md text-base font-medium hover:text-blue-600 hover:bg-gray-50">Contact</a>
+                <a href="#home"
+                    class="nav-link active block px-3 py-2 rounded-md text-base font-medium hover:text-blue-600 hover:bg-gray-50">Home</a>
+                <a href="#about"
+                    class="nav-link block px-3 py-2 rounded-md text-base font-medium hover:text-blue-600 hover:bg-gray-50">About</a>
+                <a href="#skills"
+                    class="nav-link block px-3 py-2 rounded-md text-base font-medium hover:text-blue-600 hover:bg-gray-50">Skills</a>
+                <a href="#projects"
+                    class="nav-link block px-3 py-2 rounded-md text-base font-medium hover:text-blue-600 hover:bg-gray-50">Projects</a>
+                <a href="#education"
+                    class="nav-link block px-3 py-2 rounded-md text-base font-medium hover:text-blue-600 hover:bg-gray-50">Education</a>
+                <a href="#contact"
+                    class="nav-link block px-3 py-2 rounded-md text-base font-medium hover:text-blue-600 hover:bg-gray-50">Contact</a>
             </div>
         </div>
     </nav>
 
-       <!-- Hero Section -->
-    <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-900">
+    <!-- Hero Section -->
+    <section id="home"
+        class="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-900">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-10 md:mb-0 fade-in">
-                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 dark:text-gray-100 mb-4">Hi, I'm <span class="text-blue-600 dark:text-blue-400">Hemant Borana</span></h1>
-                    <h2 class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-6">Data Analytics Specialist | BCA Final Year</h2>
-                    <p class="text-gray-600 dark:text-gray-300 mb-8 max-w-lg">Passionate about transforming raw data into meaningful insights. Specializing in Python, SQL, and data visualization tools. Seeking opportunities to apply analytical skills to solve real-world business challenges.</p>
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 dark:text-gray-100 mb-4">Hi, I'm <span
+                            class="text-blue-600 dark:text-blue-400">Hemant Borana</span></h1>
+                    <h2 class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-6">Data Analytics Specialist |
+                        BCA Final Year</h2>
+                    <p class="text-gray-600 dark:text-gray-300 mb-8 max-w-lg">Passionate about transforming raw data
+                        into meaningful insights. Specializing in Python, SQL, and data visualization tools. Seeking
+                        opportunities to apply analytical skills to solve real-world business challenges.</p>
                     <div class="flex space-x-4">
-                        <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition shadow-md hover:shadow-lg">Contact Me</a>
-                        <a href="#projects" class="border border-blue-600 text-blue-600 hover:bg-blue-50 dark:hover:bg-gray-700 px-6 py-3 rounded-lg font-medium transition dark:text-blue-400 dark:border-blue-400">View Projects</a>
+                        <a href="#contact"
+                            class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition shadow-md hover:shadow-lg">Contact
+                            Me</a>
+                        <a href="#projects"
+                            class="border border-blue-600 text-blue-600 hover:bg-blue-50 dark:hover:bg-gray-700 px-6 py-3 rounded-lg font-medium transition dark:text-blue-400 dark:border-blue-400">View
+                            Projects</a>
                     </div>
                 </div>
                 <div class="md:w-1/2 flex justify-center fade-in delay-1">
-                    <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white dark:border-gray-700 shadow-xl">
+                    <div
+                        class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white dark:border-gray-700 shadow-xl">
                         <!-- Replace with your image -->
-                       <img src="images/profilepic.jpg" alt="Hemant Borana" class="w-full h-full object-cover" style="margin-top: 1cm; overflow:visible;">
+                        <img src="images/profilepic.jpg" alt="Hemant Borana" class="w-full h-full object-cover"
+                            style="margin-top: 1cm; overflow:visible;">
 
                     </div>
                 </div>
@@ -150,7 +189,8 @@
     <!-- About Section -->
     <section id="about" class="py-16 bg-white dark:bg-gray-800">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-12 fade-in dark:text-gray-100">About <span class="text-blue-600 dark:text-blue-400">Me</span></h2>
+            <h2 class="text-3xl font-bold text-center mb-12 fade-in dark:text-gray-100">About <span
+                    class="text-blue-600 dark:text-blue-400">Me</span></h2>
             <div class="flex flex-col md:flex-row items-center gap-8">
                 <div class="md:w-1/3 mb-8 md:mb-0 fade-in delay-1">
                     <div class="bg-gray-100 dark:bg-gray-700 p-6 rounded-xl shadow-md">
@@ -177,8 +217,14 @@
                 </div>
                 <div class="md:w-2/3 fade-in delay-2">
                     <h3 class="text-2xl font-semibold mb-4 dark:text-gray-100">Data Analytics Specialist</h3>
-                    <p class="text-gray-600 dark:text-gray-300 mb-6">Final-year BCA student at Amity University Online specializing in Data Analytics. Currently building expertise in Python, SQL, Excel, data visualization, and statistical analysis. Passionate about transforming raw data into actionable insights that drive business decisions.</p>
-                    <p class="text-gray-600 dark:text-gray-300 mb-6">I approach data with curiosity and rigor, applying statistical methods and visualization techniques to uncover patterns and tell compelling data stories. My academic projects have strengthened my skills in data mining, modeling, and warehousing.</p>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">Final-year BCA student at Amity University Online
+                        specializing in Data Analytics. Currently building expertise in Python, SQL, Excel, data
+                        visualization, and statistical analysis. Passionate about transforming raw data into actionable
+                        insights that drive business decisions.</p>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">I approach data with curiosity and rigor, applying
+                        statistical methods and visualization techniques to uncover patterns and tell compelling data
+                        stories. My academic projects have strengthened my skills in data mining, modeling, and
+                        warehousing.</p>
                     <div class="flex flex-wrap gap-4">
                         <div class="bg-blue-50 dark:bg-gray-700 px-4 py-2 rounded-lg flex items-center">
                             <i class="fas fa-check-circle text-blue-500 dark:text-blue-400 mr-2"></i>
@@ -204,174 +250,176 @@
 
     <!-- Skills Section -->
     <!-- Skills Section -->
-<section id="skills" class="py-16 bg-gray-50">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-bold text-center mb-12 fade-in">My <span class="text-blue-600">Skills</span></h2>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 fade-in delay-1">
-            <!-- Technical Skills -->
-            <div class="bg-white p-6 rounded-xl shadow-md">
-                <h3 class="text-xl font-semibold mb-6 text-blue-600 flex items-center">
-                    <i class="fas fa-code mr-3"></i> Technical Skills
-                </h3>
-                <div class="space-y-4">
-                    <div>
-                        <div class="flex justify-between mb-1">
-                            <span class="font-medium">Python</span>
-                            <span class="text-blue-600 font-medium">Advanced</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-2.5">
-                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between mb-1">
-                            <span class="font-medium">SQL</span>
-                            <span class="text-blue-600 font-medium">Advanced</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-2.5">
-                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between mb-1">
-                            <span class="font-medium">Excel</span>
-                            <span class="text-blue-600 font-medium">Advanced</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-2.5">
-                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between mb-1">
-                            <span class="font-medium">Data Visualization</span>
-                            <span class="text-blue-600 font-medium">Intermediate</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-2.5">
-                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 80%"></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between mb-1">
-                            <span class="font-medium">Statistics</span>
-                            <span class="text-blue-600 font-medium">Intermediate</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-2.5">
-                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 75%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Professional Skills -->
-            <div class="bg-white p-6 rounded-xl shadow-md">
-                <h3 class="text-xl font-semibold mb-6 text-blue-600 flex items-center">
-                    <i class="fas fa-user-tie mr-3"></i> Professional Skills
-                </h3>
-                <div class="space-y-4">
-                    <div>
-                        <div class="flex justify-between mb-1">
-                            <span class="font-medium">Communication</span>
-                            <span class="text-blue-600 font-medium">Advanced</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-2.5">
-                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between mb-1">
-                            <span class="font-medium">Teamwork</span>
-                            <span class="text-blue-600 font-medium">Advanced</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-2.5">
-                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between mb-1">
-                            <span class="font-medium">Problem Solving</span>
-                            <span class="text-blue-600 font-medium">Advanced</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-2.5">
-                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 95%"></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between mb-1">
-                            <span class="font-medium">Time Management</span>
-                            <span class="text-blue-600 font-medium">Intermediate</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-2.5">
-                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 80%"></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between mb-1">
-                            <span class="font-medium">Creativity</span>
-                            <span class="text-blue-600 font-medium">Advanced</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-2.5">
-                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 85%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Tools & Technologies -->
-        <div class="mt-12 fade-in delay-2">
-            <h3 class="text-xl font-semibold mb-6 text-center text-blue-600">Tools & Technologies</h3>
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-md">
-                    <i class="fab fa-python text-4xl text-blue-600 mb-2"></i>
-                    <span class="text-sm font-medium">Python</span>
-                    <span class="text-xs text-gray-500 mt-1">Advanced</span>
-                </div>
-                <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-md">
-                    <i class="fas fa-database text-4xl text-blue-700 mb-2"></i>
-                    <span class="text-sm font-medium">SQL</span>
-                    <span class="text-xs text-gray-500 mt-1">Advanced</span>
-                </div>
-                <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-md">
-                    <i class="fas fa-file-excel text-4xl text-green-600 mb-2"></i>
-                    <span class="text-sm font-medium">Excel</span>
-                    <span class="text-xs text-gray-500 mt-1">Advanced</span>
-                </div>
-                <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-md">
-                    <i class="fas fa-chart-line text-4xl text-purple-600 mb-2"></i>
-                    <span class="text-sm font-medium">Data Viz</span>
-                    <span class="text-xs text-gray-500 mt-1">Intermediate</span>
-                </div>
-                <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-md">
-                    <i class="fab fa-git-alt text-4xl text-orange-600 mb-2"></i>
-                    <span class="text-sm font-medium">Git</span>
-                    <span class="text-xs text-gray-500 mt-1">Intermediate</span>
-                </div>
-                <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-md">
-                    <i class="fab fa-github text-4xl text-gray-800 mb-2"></i>
-                    <span class="text-sm font-medium">GitHub</span>
-                    <span class="text-xs text-gray-500 mt-1">Intermediate</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    <section id="skills" class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 fade-in">My <span class="text-blue-600">Skills</span></h2>
 
-     <!-- Projects Section -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 fade-in delay-1">
+                <!-- Technical Skills -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-semibold mb-6 text-blue-600 flex items-center">
+                        <i class="fas fa-code mr-3"></i> Technical Skills
+                    </h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Python</span>
+                                <span class="text-blue-600 font-medium">Advanced</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">SQL</span>
+                                <span class="text-blue-600 font-medium">Advanced</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Excel</span>
+                                <span class="text-blue-600 font-medium">Advanced</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Data Visualization</span>
+                                <span class="text-blue-600 font-medium">Intermediate</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Statistics</span>
+                                <span class="text-blue-600 font-medium">Intermediate</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Professional Skills -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-semibold mb-6 text-blue-600 flex items-center">
+                        <i class="fas fa-user-tie mr-3"></i> Professional Skills
+                    </h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Communication</span>
+                                <span class="text-blue-600 font-medium">Advanced</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Teamwork</span>
+                                <span class="text-blue-600 font-medium">Advanced</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Problem Solving</span>
+                                <span class="text-blue-600 font-medium">Advanced</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Time Management</span>
+                                <span class="text-blue-600 font-medium">Intermediate</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Creativity</span>
+                                <span class="text-blue-600 font-medium">Advanced</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tools & Technologies -->
+            <div class="mt-12 fade-in delay-2">
+                <h3 class="text-xl font-semibold mb-6 text-center text-blue-600">Tools & Technologies</h3>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                    <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-md">
+                        <i class="fab fa-python text-4xl text-blue-600 mb-2"></i>
+                        <span class="text-sm font-medium">Python</span>
+                        <span class="text-xs text-gray-500 mt-1">Advanced</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-md">
+                        <i class="fas fa-database text-4xl text-blue-700 mb-2"></i>
+                        <span class="text-sm font-medium">SQL</span>
+                        <span class="text-xs text-gray-500 mt-1">Advanced</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-md">
+                        <i class="fas fa-file-excel text-4xl text-green-600 mb-2"></i>
+                        <span class="text-sm font-medium">Excel</span>
+                        <span class="text-xs text-gray-500 mt-1">Advanced</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-md">
+                        <i class="fas fa-chart-line text-4xl text-purple-600 mb-2"></i>
+                        <span class="text-sm font-medium">Data Viz</span>
+                        <span class="text-xs text-gray-500 mt-1">Intermediate</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-md">
+                        <i class="fab fa-git-alt text-4xl text-orange-600 mb-2"></i>
+                        <span class="text-sm font-medium">Git</span>
+                        <span class="text-xs text-gray-500 mt-1">Intermediate</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-md">
+                        <i class="fab fa-github text-4xl text-gray-800 mb-2"></i>
+                        <span class="text-sm font-medium">GitHub</span>
+                        <span class="text-xs text-gray-500 mt-1">Intermediate</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
     <section id="projects" class="py-16 bg-white">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold text-center mb-12 fade-in">My <span class="text-blue-600">Projects</span></h2>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Project 4 - Order Management System -->
-                <div class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition fade-in delay-3">
-                 <div class="h-48 overflow-hidden">
-                     <img src="images/oms(p1).jpg" alt="Order Management System" class="w-full h-full object-cover">
-    
+                <div
+                    class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition fade-in delay-3">
+                    <div class="h-48 overflow-hidden">
+                        <img src="images/oms(p1).jpg" alt="Order Management System" class="w-full h-full object-cover">
+
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2">Distributor Order Management</h3>
-                        <p class="text-gray-600 mb-4">A streamlined system to manage retailer orders, monitor stock status, and track order progress.</p>
+                        <p class="text-gray-600 mb-4">A streamlined system to manage retailer orders, monitor stock
+                            status, and track order progress.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">HTML/CSS</span>
                             <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">JavaScript</span>
@@ -379,24 +427,30 @@
                             <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Excel Export</span>
                         </div>
                         <div class="flex space-x-3">
-                            <a href="#" class="text-blue-600 hover:text-blue-800 flex items-center">
+                            <a href="https://hemantborana.github.io/D-OMS/"
+                                class="text-blue-600 hover:text-blue-800 flex items-center" target="_blank">
                                 <i class="fas fa-external-link-alt mr-1"></i> Live Demo
                             </a>
-                            <a href="#" class="text-gray-600 hover:text-gray-800 flex items-center">
+                            <a href="https://github.com/hemantborana/D-OMS"
+                                class="text-gray-600 hover:text-gray-800 flex items-center" target="_blank">
                                 <i class="fab fa-github mr-1"></i> Source Code
                             </a>
                         </div>
+
                     </div>
                 </div>
-                
+
                 <!-- Project 1 -->
-                <div class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition fade-in">
+                <div
+                    class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition fade-in">
                     <div class="h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="E-commerce Website" class="w-full h-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                            alt="E-commerce Website" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2">E-commerce Website</h3>
-                        <p class="text-gray-600 mb-4">A full-featured online store with product catalog, cart functionality, and secure checkout.</p>
+                        <p class="text-gray-600 mb-4">A full-featured online store with product catalog, cart
+                            functionality, and secure checkout.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">HTML/CSS</span>
                             <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">JavaScript</span>
@@ -413,15 +467,18 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Project 2 -->
-                <div class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition fade-in delay-1">
+                <div
+                    class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition fade-in delay-1">
                     <div class="h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Task Management App" class="w-full h-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                            alt="Task Management App" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2">Task Management App</h3>
-                        <p class="text-gray-600 mb-4">A productivity application to organize, prioritize, and track daily tasks and projects.</p>
+                        <p class="text-gray-600 mb-4">A productivity application to organize, prioritize, and track
+                            daily tasks and projects.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">React</span>
                             <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Node.js</span>
@@ -438,15 +495,18 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Project 3 -->
-                <div class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition fade-in delay-2">
+                <div
+                    class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition fade-in delay-2">
                     <div class="h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Student Portal" class="w-full h-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                            alt="Student Portal" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2">Student Portal</h3>
-                        <p class="text-gray-600 mb-4">A comprehensive platform for students to access course materials, submit assignments, and track progress.</p>
+                        <p class="text-gray-600 mb-4">A comprehensive platform for students to access course materials,
+                            submit assignments, and track progress.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Java</span>
                             <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Spring Boot</span>
@@ -464,9 +524,10 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="text-center mt-12 fade-in delay-3">
-                <a href="#" class="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition">
+                <a href="#"
+                    class="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition">
                     <i class="fab fa-github mr-2"></i> View All Projects on GitHub
                 </a>
             </div>
@@ -476,12 +537,13 @@
     <!-- Education Section -->
     <section id="education" class="py-16 bg-gray-50">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-12 fade-in">My <span class="text-blue-600">Education</span></h2>
-            
+            <h2 class="text-3xl font-bold text-center mb-12 fade-in">My <span class="text-blue-600">Education</span>
+            </h2>
+
             <div class="relative">
                 <!-- Timeline -->
                 <div class="border-l-2 border-blue-200 absolute h-full top-0 left-4 md:left-1/2"></div>
-                
+
                 <!-- Education Item 1 -->
                 <div class="mb-8 fade-in delay-1">
                     <div class="flex flex-col md:flex-row items-center md:justify-between">
@@ -490,22 +552,26 @@
                             <p class="text-gray-600">Amity University Online</p>
                             <p class="text-sm text-gray-500">2023 - 2026</p>
                         </div>
-                        <div class="w-8 h-8 bg-blue-600 rounded-full z-10 flex items-center justify-center order-1 md:order-none">
+                        <div
+                            class="w-8 h-8 bg-blue-600 rounded-full z-10 flex items-center justify-center order-1 md:order-none">
                             <i class="fas fa-graduation-cap text-white"></i>
                         </div>
                         <div class="md:w-5/12 order-3">
-                            <p class="text-gray-600">Specialization in Data Analytics. CGPA: 7.38 (as of Semester III)</p>
-                            <p class="text-sm text-gray-500 mt-2">Relevant Courses: Data Mining, Data Modeling, Data Warehousing, Probability & Statistics</p>
+                            <p class="text-gray-600">Specialization in Data Analytics. CGPA: 7.38 (as of Semester III)
+                            </p>
+                            <p class="text-sm text-gray-500 mt-2">Relevant Courses: Data Mining, Data Modeling, Data
+                                Warehousing, Probability & Statistics</p>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Education Item 2 -->
                 <div class="mb-8 fade-in delay-2">
                     <div class="flex flex-col md:flex-row items-center md:justify-between">
                         <div class="md:w-5/12 order-1 text-right mb-4 md:mb-0">
                             <h3 class="text-xl font-semibold">Higher Secondary (12th)</h3>
-                            <p class="text-gray-600">Dnyanprassarak Mandal's P.V.S. Sarojini Madhusudan Kushe Higher Secondary School</p>
+                            <p class="text-gray-600">Dnyanprassarak Mandal's P.V.S. Sarojini Madhusudan Kushe Higher
+                                Secondary School</p>
                             <p class="text-sm text-gray-500">2021 - 2023</p>
                         </div>
                         <div class="w-8 h-8 bg-blue-600 rounded-full z-10 flex items-center justify-center order-1">
@@ -513,11 +579,12 @@
                         </div>
                         <div class="md:w-5/12 order-3">
                             <p class="text-gray-600">Completed with Computer Science stream. Percentage: 71%</p>
-                            <p class="text-sm text-gray-500 mt-2">Learned fundamentals of programming and computer applications</p>
+                            <p class="text-sm text-gray-500 mt-2">Learned fundamentals of programming and computer
+                                applications</p>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Education Item 3 -->
                 <div class="mb-8 fade-in delay-3">
                     <div class="flex flex-col md:flex-row items-center md:justify-between">
@@ -526,17 +593,19 @@
                             <p class="text-gray-600">Dnyanprassarak Vidyalaya</p>
                             <p class="text-sm text-gray-500">2021</p>
                         </div>
-                        <div class="w-8 h-8 bg-blue-600 rounded-full z-10 flex items-center justify-center order-1 md:order-none">
+                        <div
+                            class="w-8 h-8 bg-blue-600 rounded-full z-10 flex items-center justify-center order-1 md:order-none">
                             <i class="fas fa-book text-white"></i>
                         </div>
                         <div class="md:w-5/12 order-3">
                             <p class="text-gray-600">Completed with distinction. Percentage: 75%</p>
-                            <p class="text-sm text-gray-500 mt-2">Developed strong foundation in mathematics and logical reasoning</p>
+                            <p class="text-sm text-gray-500 mt-2">Developed strong foundation in mathematics and logical
+                                reasoning</p>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Certifications -->
             <div class="mt-16 fade-in delay-4">
                 <h3 class="text-2xl font-semibold text-center mb-8 text-blue-600">Certifications</h3>
@@ -547,7 +616,8 @@
                             <h4 class="text-lg font-medium">Web Development Bootcamp</h4>
                         </div>
                         <p class="text-gray-600 mb-2">Udemy - 2023</p>
-                        <p class="text-sm text-gray-500">Completed comprehensive training in modern web development technologies including HTML5, CSS3, JavaScript, and React.</p>
+                        <p class="text-sm text-gray-500">Completed comprehensive training in modern web development
+                            technologies including HTML5, CSS3, JavaScript, and React.</p>
                     </div>
                     <div class="bg-white p-6 rounded-xl shadow-md">
                         <div class="flex items-center mb-4">
@@ -555,7 +625,8 @@
                             <h4 class="text-lg font-medium">Python Programming</h4>
                         </div>
                         <p class="text-gray-600 mb-2">Coursera - 2022</p>
-                        <p class="text-sm text-gray-500">Learned Python fundamentals, data structures, and algorithms through hands-on projects and assignments.</p>
+                        <p class="text-sm text-gray-500">Learned Python fundamentals, data structures, and algorithms
+                            through hands-on projects and assignments.</p>
                     </div>
                     <div class="bg-white p-6 rounded-xl shadow-md">
                         <div class="flex items-center mb-4">
@@ -563,7 +634,8 @@
                             <h4 class="text-lg font-medium">Database Management</h4>
                         </div>
                         <p class="text-gray-600 mb-2">edX - 2022</p>
-                        <p class="text-sm text-gray-500">Gained expertise in database design, SQL queries, and database administration with MySQL.</p>
+                        <p class="text-sm text-gray-500">Gained expertise in database design, SQL queries, and database
+                            administration with MySQL.</p>
                     </div>
                 </div>
             </div>
@@ -573,13 +645,15 @@
     <!-- Contact Section -->
     <section id="contact" class="py-16 bg-white">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-12 fade-in">Get In <span class="text-blue-600">Touch</span></h2>
-            
+            <h2 class="text-3xl font-bold text-center mb-12 fade-in">Get In <span class="text-blue-600">Touch</span>
+            </h2>
+
             <div class="flex flex-col md:flex-row gap-8">
                 <div class="md:w-1/2 fade-in delay-1">
                     <h3 class="text-xl font-semibold mb-6 text-blue-600">Contact Information</h3>
-                    <p class="text-gray-600 mb-8">Feel free to reach out to me for any questions or opportunities. I'll get back to you as soon as possible!</p>
-                    
+                    <p class="text-gray-600 mb-8">Feel free to reach out to me for any questions or opportunities. I'll
+                        get back to you as soon as possible!</p>
+
                     <div class="space-y-6">
                         <div class="flex items-start">
                             <div class="bg-blue-100 p-3 rounded-full mr-4">
@@ -609,52 +683,65 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="mt-8">
                         <h4 class="font-medium mb-4">Follow Me</h4>
-                      <div class="flex space-x-4">
-    <a href="https://www.linkedin.com/in/hemant-parasmal-borana-17a742289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" 
-       class="bg-gray-100 hover:bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center transition">
-        <i class="fab fa-linkedin-in text-blue-600"></i>
-    </a>
-    <a href="https://github.com/hb00112" 
-       class="bg-gray-100 hover:bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center transition">
-        <i class="fab fa-github text-blue-600"></i>
-    </a>
-    <a href="https://www.facebook.com/share/16o96MwNcJ/" 
-       class="bg-gray-100 hover:bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center transition">
-        <i class="fab fa-facebook text-blue-600"></i>
-    </a>
-    <a href="https://www.instagram.com/hemant_borana_/" 
-       class="bg-gray-100 hover:bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center transition">
-        <i class="fab fa-instagram text-blue-600"></i>
-    </a>
-</div>
+                        <div class="flex space-x-4">
+                            <a href="https://www.linkedin.com/in/hemant-parasmal-borana-17a742289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                                class="bg-gray-100 hover:bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center transition">
+                                <i class="fab fa-linkedin-in text-blue-600"></i>
+                            </a>
+                            <a href="https://github.com/hb00112"
+                                class="bg-gray-100 hover:bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center transition">
+                                <i class="fab fa-github text-blue-600"></i>
+                            </a>
+                            <a href="https://www.facebook.com/share/16o96MwNcJ/"
+                                class="bg-gray-100 hover:bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center transition">
+                                <i class="fab fa-facebook text-blue-600"></i>
+                            </a>
+                            <a href="https://www.instagram.com/hemant_borana_/"
+                                class="bg-gray-100 hover:bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center transition">
+                                <i class="fab fa-instagram text-blue-600"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                
+
                 <div class="md:w-1/2 fade-in delay-2">
-                   <form id="contact-form" class="bg-gray-50 p-6 rounded-xl shadow-md dark:bg-gray-700">
-    <div class="mb-4">
-        <label for="name" class="block text-gray-700 dark:text-gray-300 font-medium mb-2">Your Name</label>
-        <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-600 dark:border-gray-500 dark:text-white" placeholder="Enter your name" required>
-    </div>
-    <div class="mb-4">
-        <label for="email" class="block text-gray-700 dark:text-gray-300 font-medium mb-2">Your Email</label>
-        <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-600 dark:border-gray-500 dark:text-white" placeholder="Enter your email" required>
-    </div>
-    <div class="mb-4">
-        <label for="subject" class="block text-gray-700 dark:text-gray-300 font-medium mb-2">Subject</label>
-        <input type="text" id="subject" name="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-600 dark:border-gray-500 dark:text-white" placeholder="Enter subject" required>
-    </div>
-    <div class="mb-4">
-        <label for="message" class="block text-gray-700 dark:text-gray-300 font-medium mb-2">Your Message</label>
-        <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-600 dark:border-gray-500 dark:text-white" placeholder="Enter your message" required></textarea>
-    </div>
-    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-[1.02] active:scale-95">
-        Send Message <i class="fas fa-paper-plane ml-2"></i>
-    </button>
-</form>
+                    <form id="contact-form" class="bg-gray-50 p-6 rounded-xl shadow-md dark:bg-gray-700">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 dark:text-gray-300 font-medium mb-2">Your
+                                Name</label>
+                            <input type="text" id="name" name="name"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-600 dark:border-gray-500 dark:text-white"
+                                placeholder="Enter your name" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 dark:text-gray-300 font-medium mb-2">Your
+                                Email</label>
+                            <input type="email" id="email" name="email"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-600 dark:border-gray-500 dark:text-white"
+                                placeholder="Enter your email" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="subject"
+                                class="block text-gray-700 dark:text-gray-300 font-medium mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-600 dark:border-gray-500 dark:text-white"
+                                placeholder="Enter subject" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block text-gray-700 dark:text-gray-300 font-medium mb-2">Your
+                                Message</label>
+                            <textarea id="message" name="message" rows="5"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-600 dark:border-gray-500 dark:text-white"
+                                placeholder="Enter your message" required></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-[1.02] active:scale-95">
+                            Send Message <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -668,20 +755,23 @@
                     <span class="text-xl font-bold">Hemant Borana</span>
                     <p class="text-gray-400 mt-1">Data Analytics Specialist & BCA Final Year</p>
                 </div>
-               <div class="flex space-x-6">
-    <a href="https://www.linkedin.com/in/hemant-parasmal-borana-17a742289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="text-gray-400 hover:text-white transition">
-        <i class="fab fa-linkedin-in"></i>
-    </a>
-    <a href="https://github.com/hb00112" class="text-gray-400 hover:text-white transition">
-        <i class="fab fa-github"></i>
-    </a>
-    <a href="https://www.facebook.com/share/16o96MwNcJ/" class="text-gray-400 hover:text-white transition">
-        <i class="fab fa-facebook"></i>
-    </a>
-    <a href="https://www.instagram.com/hemant_borana_/" class="text-gray-400 hover:text-white transition">
-        <i class="fab fa-instagram"></i>
-    </a>
-</div>
+                <div class="flex space-x-6">
+                    <a href="https://www.linkedin.com/in/hemant-parasmal-borana-17a742289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                        class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/hb00112" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.facebook.com/share/16o96MwNcJ/"
+                        class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/hemant_borana_/"
+                        class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
             </div>
             <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
                 <p>&copy; 2025 Hemant Parasmal Borana. All rights reserved.</p>
@@ -690,199 +780,199 @@
     </footer>
 
     <script>
-       
+
         // Initialize EmailJS
-       // Updated Contact Form Script - Place this at the bottom of your HTML, before closing </body> tag
+        // Updated Contact Form Script - Place this at the bottom of your HTML, before closing </body> tag
 
-       document.addEventListener('DOMContentLoaded', function() {
-    // Initialize EmailJS with your public key
-    (function() {
-        emailjs.init('MR87pdkp-Hr9AcuQ1'); // Your public key
-        
-        // Set up form handling after EmailJS is initialized
-        setTimeout(setupContactForm, 500); // Small delay to ensure initialization
-    })();
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize EmailJS with your public key
+            (function () {
+                emailjs.init('MR87pdkp-Hr9AcuQ1'); // Your public key
 
-   
-});
-
-// Load EmailJS first, then initialize
+                // Set up form handling after EmailJS is initialized
+                setTimeout(setupContactForm, 500); // Small delay to ensure initialization
+            })();
 
 
-function setupContactForm() {
-    const contactForm = document.getElementById('contact-form');
-    
-    if (!contactForm) {
-        console.error('Contact form not found');
-        return;
-    }
-    
-    contactForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-        
-        // Get form elements
-        const name = document.getElementById('name');
-        const email = document.getElementById('email');
-        const subject = document.getElementById('subject');
-        const message = document.getElementById('message');
-        const submitBtn = contactForm.querySelector('button[type="submit"]');
-        
-        // Validate form
-        if (!validateForm(name, email, subject, message)) {
-            return;
-        }
-        
-        // Show loading state
-        showLoadingAnimation(submitBtn);
-        
-        // Prepare template parameters
-        const templateParams = {
-            name: name.value.trim(),
-            email: email.value.trim(),
-            subject: subject.value.trim(),
-            message: message.value.trim(),
-            to_name: 'Hemant Borana'
-        };
-        
-        // Send email using EmailJS
-        emailjs.send('service_cky6mhg', 'template_j2p0d7h', templateParams)
-            .then(function(response) {
-                console.log('SUCCESS!', response.status, response.text);
-                showSuccessAnimation(submitBtn);
-                showMessage('Your message has been sent successfully!', 'success');
-                contactForm.reset();
-                
-                // Reset button after animation
-                setTimeout(() => {
-                    resetButton(submitBtn);
-                }, 4000);
-            }, function(error) {
-                console.error('FAILED...', error);
-                showErrorAnimation(submitBtn);
-                showMessage('Failed to send message. Please try again or contact directly.', 'error');
-                
-                // Reset button after animation
-                setTimeout(() => {
-                    resetButton(submitBtn);
-                }, 3000);
+        });
+
+        // Load EmailJS first, then initialize
+
+
+        function setupContactForm() {
+            const contactForm = document.getElementById('contact-form');
+
+            if (!contactForm) {
+                console.error('Contact form not found');
+                return;
+            }
+
+            contactForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                // Get form elements
+                const name = document.getElementById('name');
+                const email = document.getElementById('email');
+                const subject = document.getElementById('subject');
+                const message = document.getElementById('message');
+                const submitBtn = contactForm.querySelector('button[type="submit"]');
+
+                // Validate form
+                if (!validateForm(name, email, subject, message)) {
+                    return;
+                }
+
+                // Show loading state
+                showLoadingAnimation(submitBtn);
+
+                // Prepare template parameters
+                const templateParams = {
+                    name: name.value.trim(),
+                    email: email.value.trim(),
+                    subject: subject.value.trim(),
+                    message: message.value.trim(),
+                    to_name: 'Hemant Borana'
+                };
+
+                // Send email using EmailJS
+                emailjs.send('service_cky6mhg', 'template_j2p0d7h', templateParams)
+                    .then(function (response) {
+                        console.log('SUCCESS!', response.status, response.text);
+                        showSuccessAnimation(submitBtn);
+                        showMessage('Your message has been sent successfully!', 'success');
+                        contactForm.reset();
+
+                        // Reset button after animation
+                        setTimeout(() => {
+                            resetButton(submitBtn);
+                        }, 4000);
+                    }, function (error) {
+                        console.error('FAILED...', error);
+                        showErrorAnimation(submitBtn);
+                        showMessage('Failed to send message. Please try again or contact directly.', 'error');
+
+                        // Reset button after animation
+                        setTimeout(() => {
+                            resetButton(submitBtn);
+                        }, 3000);
+                    });
             });
-    });
-}
+        }
 
 
 
 
-// Updated Email Validation Function
-function validateForm(name, email, subject, message) {
-    // Clear previous errors
-    clearErrorMessages();
-    
-    let isValid = true;
-    
-    // Name validation
-    if (!name.value || name.value.trim().length < 2) {
-        showFieldError(name, 'Name must be at least 2 characters long');
-        isValid = false;
-    }
-    
-    // Enhanced Email validation
-    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-    if (!email.value || !emailRegex.test(email.value.trim())) {
-        showFieldError(email, 'Please enter a valid email address (e.g., example@domain.com)');
-        isValid = false;
-    }
-    
-    // Subject validation
-    if (!subject.value || subject.value.trim().length < 5) {
-        showFieldError(subject, 'Subject must be at least 5 characters long');
-        isValid = false;
-    }
-    
-    // Message validation
-    if (!message.value || message.value.trim().length < 10) {
-        showFieldError(message, 'Message must be at least 10 characters long');
-        isValid = false;
-    }
-    
-    return isValid;
-}
+        // Updated Email Validation Function
+        function validateForm(name, email, subject, message) {
+            // Clear previous errors
+            clearErrorMessages();
 
-function showFieldError(field, message) {
-    // Remove any existing error classes
-    field.classList.remove('border-red-500', 'focus:ring-red-500');
-    
-    // Add error styling
-    field.classList.add('border-red-500', 'focus:ring-red-500');
-    
-    // Create or update error message
-    let errorElement = field.nextElementSibling;
-    if (!errorElement || !errorElement.classList.contains('field-error')) {
-        errorElement = document.createElement('div');
-        errorElement.className = 'text-red-500 text-sm mt-1 field-error';
-        field.parentNode.insertBefore(errorElement, field.nextSibling);
-    }
-    errorElement.textContent = message;
-}
+            let isValid = true;
 
-// Updated clearErrorMessages function
-function clearErrorMessages() {
-    // Remove error styling from all fields
-    document.querySelectorAll('.border-red-500').forEach(field => {
-        field.classList.remove('border-red-500', 'focus:ring-red-500');
-    });
-    
-    // Remove all error messages
-    document.querySelectorAll('.field-error').forEach(error => {
-        error.remove();
-    });
-    
-    // Remove general message if exists
-    const existingMessage = document.querySelector('.form-message');
-    if (existingMessage) {
-        existingMessage.remove();
-    }
-}
+            // Name validation
+            if (!name.value || name.value.trim().length < 2) {
+                showFieldError(name, 'Name must be at least 2 characters long');
+                isValid = false;
+            }
 
-function showMessage(text, type) {
-    // Remove existing message
-    const existingMessage = document.querySelector('.form-message');
-    if (existingMessage) {
-        existingMessage.remove();
-    }
-    
-    // Create new message
-    const messageDiv = document.createElement('div');
-    messageDiv.className = `form-message p-4 rounded-lg mb-4 ${type === 'success' ? 'bg-green-100 text-green-800 border border-green-300' : 'bg-red-100 text-red-800 border border-red-300'}`;
-    messageDiv.innerHTML = `
+            // Enhanced Email validation
+            const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!email.value || !emailRegex.test(email.value.trim())) {
+                showFieldError(email, 'Please enter a valid email address (e.g., example@domain.com)');
+                isValid = false;
+            }
+
+            // Subject validation
+            if (!subject.value || subject.value.trim().length < 5) {
+                showFieldError(subject, 'Subject must be at least 5 characters long');
+                isValid = false;
+            }
+
+            // Message validation
+            if (!message.value || message.value.trim().length < 10) {
+                showFieldError(message, 'Message must be at least 10 characters long');
+                isValid = false;
+            }
+
+            return isValid;
+        }
+
+        function showFieldError(field, message) {
+            // Remove any existing error classes
+            field.classList.remove('border-red-500', 'focus:ring-red-500');
+
+            // Add error styling
+            field.classList.add('border-red-500', 'focus:ring-red-500');
+
+            // Create or update error message
+            let errorElement = field.nextElementSibling;
+            if (!errorElement || !errorElement.classList.contains('field-error')) {
+                errorElement = document.createElement('div');
+                errorElement.className = 'text-red-500 text-sm mt-1 field-error';
+                field.parentNode.insertBefore(errorElement, field.nextSibling);
+            }
+            errorElement.textContent = message;
+        }
+
+        // Updated clearErrorMessages function
+        function clearErrorMessages() {
+            // Remove error styling from all fields
+            document.querySelectorAll('.border-red-500').forEach(field => {
+                field.classList.remove('border-red-500', 'focus:ring-red-500');
+            });
+
+            // Remove all error messages
+            document.querySelectorAll('.field-error').forEach(error => {
+                error.remove();
+            });
+
+            // Remove general message if exists
+            const existingMessage = document.querySelector('.form-message');
+            if (existingMessage) {
+                existingMessage.remove();
+            }
+        }
+
+        function showMessage(text, type) {
+            // Remove existing message
+            const existingMessage = document.querySelector('.form-message');
+            if (existingMessage) {
+                existingMessage.remove();
+            }
+
+            // Create new message
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `form-message p-4 rounded-lg mb-4 ${type === 'success' ? 'bg-green-100 text-green-800 border border-green-300' : 'bg-red-100 text-red-800 border border-red-300'}`;
+            messageDiv.innerHTML = `
         <div class="flex items-center">
             <i class="fas ${type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle'} mr-2"></i>
             <span>${text}</span>
         </div>
     `;
-    
-    // Insert message at the top of the form
-    const form = document.getElementById('contact-form');
-    form.insertBefore(messageDiv, form.firstChild);
-    
-    // Auto-remove success message after 5 seconds
-    if (type === 'success') {
-        setTimeout(() => {
-            if (messageDiv.parentNode) {
-                messageDiv.remove();
-            }
-        }, 5000);
-    }
-}
 
-function showLoadingAnimation(btn) {
-    btn.disabled = true;
-    btn.style.position = 'relative';
-    btn.style.overflow = 'hidden';
-    
-    // Create loading wave effect
-    const wave = document.createElement('div');
-    wave.className = 'loading-wave';
-    wave.style.cssText = `
+            // Insert message at the top of the form
+            const form = document.getElementById('contact-form');
+            form.insertBefore(messageDiv, form.firstChild);
+
+            // Auto-remove success message after 5 seconds
+            if (type === 'success') {
+                setTimeout(() => {
+                    if (messageDiv.parentNode) {
+                        messageDiv.remove();
+                    }
+                }, 5000);
+            }
+        }
+
+        function showLoadingAnimation(btn) {
+            btn.disabled = true;
+            btn.style.position = 'relative';
+            btn.style.overflow = 'hidden';
+
+            // Create loading wave effect
+            const wave = document.createElement('div');
+            wave.className = 'loading-wave';
+            wave.style.cssText = `
         position: absolute;
         top: 0;
         left: -100%;
@@ -892,12 +982,12 @@ function showLoadingAnimation(btn) {
         animation: wave 1.5s infinite;
         z-index: 1;
     `;
-    
-    // Add wave animation keyframes
-    if (!document.getElementById('wave-animation')) {
-        const style = document.createElement('style');
-        style.id = 'wave-animation';
-        style.textContent = `
+
+            // Add wave animation keyframes
+            if (!document.getElementById('wave-animation')) {
+                const style = document.createElement('style');
+                style.id = 'wave-animation';
+                style.textContent = `
             @keyframes wave {
                 0% { left: -100%; }
                 100% { left: 100%; }
@@ -920,11 +1010,11 @@ function showLoadingAnimation(btn) {
                 100% { stroke-dashoffset: 0; }
             }
         `;
-        document.head.appendChild(style);
-    }
-    
-    btn.appendChild(wave);
-    btn.innerHTML = `
+                document.head.appendChild(style);
+            }
+
+            btn.appendChild(wave);
+            btn.innerHTML = `
         <span style="position: relative; z-index: 2;">
             Sending
             <span class="loading-dots">
@@ -934,25 +1024,25 @@ function showLoadingAnimation(btn) {
             </span>
         </span>
     `;
-    
-    // Add pulse effect to button
-    btn.style.animation = 'pulse 2s infinite';
-}
 
-// Update social media links
+            // Add pulse effect to button
+            btn.style.animation = 'pulse 2s infinite';
+        }
+
+        // Update social media links
 
 
 
-function showSuccessAnimation(btn) {
-    // Remove loading elements
-    const wave = btn.querySelector('.loading-wave');
-    if (wave) wave.remove();
-    
-    // Stop pulse animation
-    btn.style.animation = 'none';
-    
-    // Create success checkmark SVG
-    const checkmark = `
+        function showSuccessAnimation(btn) {
+            // Remove loading elements
+            const wave = btn.querySelector('.loading-wave');
+            if (wave) wave.remove();
+
+            // Stop pulse animation
+            btn.style.animation = 'none';
+
+            // Create success checkmark SVG
+            const checkmark = `
         <svg width="20" height="20" viewBox="0 0 20 20" style="display: inline-block; margin-left: 8px;">
             <path d="M3 10l4 4 10-10" stroke="white" stroke-width="2" fill="none" 
                   stroke-linecap="round" stroke-linejoin="round"
@@ -960,81 +1050,81 @@ function showSuccessAnimation(btn) {
                   style="animation: checkmark 0.6s ease-in-out forwards;"/>
         </svg>
     `;
-    
-    // Success state with smooth color transition
-    btn.style.transition = 'all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55)';
-    btn.style.background = 'linear-gradient(45deg, #10b981, #059669)';
-    btn.style.transform = 'scale(1.05)';
-    btn.style.boxShadow = '0 10px 30px rgba(16, 185, 129, 0.4)';
-    
-    // Update button content with typewriter effect
-    setTimeout(() => {
-        btn.innerHTML = `
+
+            // Success state with smooth color transition
+            btn.style.transition = 'all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55)';
+            btn.style.background = 'linear-gradient(45deg, #10b981, #059669)';
+            btn.style.transform = 'scale(1.05)';
+            btn.style.boxShadow = '0 10px 30px rgba(16, 185, 129, 0.4)';
+
+            // Update button content with typewriter effect
+            setTimeout(() => {
+                btn.innerHTML = `
             <span style="display: inline-flex; align-items: center;">
                 <span class="success-text">Message Sent!</span>
                 ${checkmark}
             </span>
         `;
-        
-        // Add typewriter effect to success text
-        const successText = btn.querySelector('.success-text');
-        const text = successText.textContent;
-        successText.textContent = '';
-        
-        let i = 0;
-        const typeWriter = setInterval(() => {
-            if (i < text.length) {
-                successText.textContent += text.charAt(i);
-                i++;
-            } else {
-                clearInterval(typeWriter);
-            }
-        }, 50);
-        
-    }, 200);
-    
-    // Add celebration particles
-    createParticles(btn);
-    
-    // Reset scale after animation
-    setTimeout(() => {
-        btn.style.transform = 'scale(1)';
-    }, 600);
-}
 
-function showErrorAnimation(btn) {
-    // Remove loading elements
-    const wave = btn.querySelector('.loading-wave');
-    if (wave) wave.remove();
-    
-    // Stop pulse animation
-    btn.style.animation = 'none';
-    
-    // Error state with shake animation
-    btn.style.transition = 'all 0.3s ease';
-    btn.style.background = 'linear-gradient(45deg, #ef4444, #dc2626)';
-    btn.style.animation = 'shake 0.6s ease-in-out';
-    
-    btn.innerHTML = `
+                // Add typewriter effect to success text
+                const successText = btn.querySelector('.success-text');
+                const text = successText.textContent;
+                successText.textContent = '';
+
+                let i = 0;
+                const typeWriter = setInterval(() => {
+                    if (i < text.length) {
+                        successText.textContent += text.charAt(i);
+                        i++;
+                    } else {
+                        clearInterval(typeWriter);
+                    }
+                }, 50);
+
+            }, 200);
+
+            // Add celebration particles
+            createParticles(btn);
+
+            // Reset scale after animation
+            setTimeout(() => {
+                btn.style.transform = 'scale(1)';
+            }, 600);
+        }
+
+        function showErrorAnimation(btn) {
+            // Remove loading elements
+            const wave = btn.querySelector('.loading-wave');
+            if (wave) wave.remove();
+
+            // Stop pulse animation
+            btn.style.animation = 'none';
+
+            // Error state with shake animation
+            btn.style.transition = 'all 0.3s ease';
+            btn.style.background = 'linear-gradient(45deg, #ef4444, #dc2626)';
+            btn.style.animation = 'shake 0.6s ease-in-out';
+
+            btn.innerHTML = `
         <span style="display: inline-flex; align-items: center;">
             Failed to Send
             <i class="fas fa-exclamation-triangle ml-2" style="animation: pulse 1s infinite;"></i>
         </span>
     `;
-    
-    // Remove shake animation after completion
-    setTimeout(() => {
-        btn.style.animation = 'none';
-    }, 600);
-}
 
-function createParticles(btn) {
-    const rect = btn.getBoundingClientRect();
-    const particleCount = 15;
-    
-    for (let i = 0; i < particleCount; i++) {
-        const particle = document.createElement('div');
-        particle.style.cssText = `
+            // Remove shake animation after completion
+            setTimeout(() => {
+                btn.style.animation = 'none';
+            }, 600);
+        }
+
+        function createParticles(btn) {
+            const rect = btn.getBoundingClientRect();
+            const particleCount = 15;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.style.cssText = `
             position: fixed;
             width: 4px;
             height: 4px;
@@ -1046,14 +1136,14 @@ function createParticles(btn) {
             top: ${rect.top + rect.height / 2}px;
             animation: particle-${i} 1s ease-out forwards;
         `;
-        
-        // Create unique animation for each particle
-        const angle = (i / particleCount) * Math.PI * 2;
-        const distance = 50 + Math.random() * 30;
-        const endX = Math.cos(angle) * distance;
-        const endY = Math.sin(angle) * distance;
-        
-        const keyframes = `
+
+                // Create unique animation for each particle
+                const angle = (i / particleCount) * Math.PI * 2;
+                const distance = 50 + Math.random() * 30;
+                const endX = Math.cos(angle) * distance;
+                const endY = Math.sin(angle) * distance;
+
+                const keyframes = `
             @keyframes particle-${i} {
                 0% {
                     transform: translate(0, 0) scale(1);
@@ -1065,136 +1155,137 @@ function createParticles(btn) {
                 }
             }
         `;
-        
-        const style = document.createElement('style');
-        style.textContent = keyframes;
-        document.head.appendChild(style);
-        
-        document.body.appendChild(particle);
-        
-        // Remove particle after animation
-        setTimeout(() => {
-            particle.remove();
-            style.remove();
-        }, 1000);
-    }
-}
 
-function resetButton(submitBtn) {
-    // Smooth transition back to original state
-    submitBtn.style.transition = 'all 0.5s ease';
-    submitBtn.style.background = '';
-    submitBtn.style.transform = 'scale(1)';
-    submitBtn.style.boxShadow = '';
-    
-    submitBtn.innerHTML = `
+                const style = document.createElement('style');
+                style.textContent = keyframes;
+                document.head.appendChild(style);
+
+                document.body.appendChild(particle);
+
+                // Remove particle after animation
+                setTimeout(() => {
+                    particle.remove();
+                    style.remove();
+                }, 1000);
+            }
+        }
+
+        function resetButton(submitBtn) {
+            // Smooth transition back to original state
+            submitBtn.style.transition = 'all 0.5s ease';
+            submitBtn.style.background = '';
+            submitBtn.style.transform = 'scale(1)';
+            submitBtn.style.boxShadow = '';
+
+            submitBtn.innerHTML = `
         Send Message 
         <i class="fas fa-paper-plane ml-2" style="transition: transform 0.3s ease;"></i>
     `;
-    
-    submitBtn.classList.remove('bg-green-500', 'hover:bg-green-600', 'bg-red-500', 'hover:bg-red-600');
-    submitBtn.classList.add('bg-blue-600', 'hover:bg-blue-700');
-    submitBtn.disabled = false;
-    
-    // Add hover effect for paper plane icon
-    submitBtn.addEventListener('mouseenter', function() {
-        const icon = this.querySelector('.fa-paper-plane');
-        if (icon) icon.style.transform = 'translateX(5px) rotate(15deg)';
-    });
-    
-    submitBtn.addEventListener('mouseleave', function() {
-        const icon = this.querySelector('.fa-paper-plane');
-        if (icon) icon.style.transform = 'translateX(0) rotate(0)';
-    });
-}
 
-// Theme toggle functionality
-const themeToggle = document.getElementById('theme-toggle');
-const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+            submitBtn.classList.remove('bg-green-500', 'hover:bg-green-600', 'bg-red-500', 'hover:bg-red-600');
+            submitBtn.classList.add('bg-blue-600', 'hover:bg-blue-700');
+            submitBtn.disabled = false;
 
-// Check for saved theme preference or use system preference
-const currentTheme = localStorage.getItem('theme') || 
-                    (prefersDarkScheme.matches ? 'dark' : 'light');
+            // Add hover effect for paper plane icon
+            submitBtn.addEventListener('mouseenter', function () {
+                const icon = this.querySelector('.fa-paper-plane');
+                if (icon) icon.style.transform = 'translateX(5px) rotate(15deg)';
+            });
 
-if (currentTheme === 'dark') {
-    document.documentElement.classList.add('dark');
-}
-
-themeToggle.addEventListener('click', function() {
-    const html = document.documentElement;
-    html.classList.toggle('dark');
-    
-    const newTheme = html.classList.contains('dark') ? 'dark' : 'light';
-    localStorage.setItem('theme', newTheme);
-});
-
-// Mobile menu toggle
-document.getElementById('menu-btn').addEventListener('click', function() {
-    document.getElementById('mobile-menu').classList.toggle('hidden');
-});
-
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        // Close mobile menu if open
-        document.getElementById('mobile-menu').classList.add('hidden');
-        
-        // Update active nav link
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.classList.remove('active');
-        });
-        this.classList.add('active');
-        
-        // Scroll to section
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-            window.scrollTo({
-                top: targetElement.offsetTop - 70,
-                behavior: 'smooth'
+            submitBtn.addEventListener('mouseleave', function () {
+                const icon = this.querySelector('.fa-paper-plane');
+                if (icon) icon.style.transform = 'translateX(0) rotate(0)';
             });
         }
-    });
-});
 
-// Update active nav link on scroll
-window.addEventListener('scroll', function() {
-    const scrollPosition = window.scrollY;
-    
-    document.querySelectorAll('section').forEach(section => {
-        const sectionTop = section.offsetTop - 100;
-        const sectionHeight = section.offsetHeight;
-        const sectionId = section.getAttribute('id');
-        
-        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${sectionId}`) {
-                    link.classList.add('active');
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+        // Check for saved theme preference or use system preference
+        const currentTheme = localStorage.getItem('theme') ||
+            (prefersDarkScheme.matches ? 'dark' : 'light');
+
+        if (currentTheme === 'dark') {
+            document.documentElement.classList.add('dark');
+        }
+
+        themeToggle.addEventListener('click', function () {
+            const html = document.documentElement;
+            html.classList.toggle('dark');
+
+            const newTheme = html.classList.contains('dark') ? 'dark' : 'light';
+            localStorage.setItem('theme', newTheme);
+        });
+
+        // Mobile menu toggle
+        document.getElementById('menu-btn').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                // Close mobile menu if open
+                document.getElementById('mobile-menu').classList.add('hidden');
+
+                // Update active nav link
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.classList.remove('active');
+                });
+                this.classList.add('active');
+
+                // Scroll to section
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
                 }
             });
-        }
-    });
-});
+        });
 
-// Add fade-in animation to elements when they come into view
-const fadeElements = document.querySelectorAll('.fade-in');
+        // Update active nav link on scroll
+        window.addEventListener('scroll', function () {
+            const scrollPosition = window.scrollY;
 
-const fadeInObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('opacity-100');
-        }
-    });
-}, { threshold: 0.1 });
+            document.querySelectorAll('section').forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.offsetHeight;
+                const sectionId = section.getAttribute('id');
 
-fadeElements.forEach(element => {
-    element.classList.add('opacity-0');
-    fadeInObserver.observe(element);
-});
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    document.querySelectorAll('.nav-link').forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${sectionId}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        });
+
+        // Add fade-in animation to elements when they come into view
+        const fadeElements = document.querySelectorAll('.fade-in');
+
+        const fadeInObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        fadeElements.forEach(element => {
+            element.classList.add('opacity-0');
+            fadeInObserver.observe(element);
+        });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </body>
+
 </html>
