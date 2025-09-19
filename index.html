@@ -46,8 +46,8 @@
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-  <img src="./assests/images/profile.jpeg" alt="Hemant Borana" width="80" style="border-radius: 20px;">
-</figure>
+          <img src="./assests/images/profile.jpeg" alt="Hemant Borana" width="80" style="border-radius: 20px;">
+        </figure>
 
 
         <div class="info-content">
@@ -133,22 +133,23 @@
         <ul class="social-list">
 
           <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="#" class="social-link">
+            <a href="https://www.instagram.com/hemant_borana_/" class="social-link" target="_blank">
               <ion-icon name="logo-instagram"></ion-icon>
             </a>
           </li>
+
+          <li class="social-item">
+            <a href="mailto:hemantpb123@gmail.com" class="social-link" target="_blank">
+              <ion-icon name="mail-outline"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/hemant-parasmal-borana-17a742289" class="social-link" target="_blank">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
 
         </ul>
 
@@ -239,8 +240,9 @@
           <ul class="service-list">
             <li class="service-item">
               <div class="service-icon-box">
-  <img class="service-icon" src="assests/images/icon-dav.png" alt="Data Analysis & Visualization" style="width: 150px; height: 150px;">
-</div>
+                <img class="service-icon" src="assests/images/icon-dav.png" alt="Data Analysis & Visualization"
+                  style="width: 150px; height: 150px;">
+              </div>
 
               <div class="service-content-box">
                 <h4 class="h4 service-item-title">Data Analysis & Visualization</h4>
@@ -252,9 +254,10 @@
             </li>
 
             <li class="service-item">
-               <div class="service-icon-box">
-  <img class="service-icon" src="assests/images/icon-bia.png" alt="Data Analysis & Visualization" style="width: 150px; height: 150px;">
-</div>
+              <div class="service-icon-box">
+                <img class="service-icon" src="assests/images/icon-bia.png" alt="Data Analysis & Visualization"
+                  style="width: 150px; height: 150px;">
+              </div>
 
               <div class="service-content-box">
                 <h4 class="h4 service-item-title">Business Intelligence & Analytics</h4>
@@ -266,9 +269,10 @@
             </li>
 
             <li class="service-item">
-             <div class="service-icon-box">
-  <img class="service-icon" src="assests/images/icon-wda.png" alt="Data Analysis & Visualization" style="width: 150px; height: 150px;">
-</div>
+              <div class="service-icon-box">
+                <img class="service-icon" src="assests/images/icon-wda.png" alt="Data Analysis & Visualization"
+                  style="width: 150px; height: 150px;">
+              </div>
 
               <div class="service-content-box">
                 <h4 class="h4 service-item-title">Web Development & Automation</h4>
@@ -281,8 +285,9 @@
 
             <li class="service-item">
               <div class="service-icon-box">
-  <img class="service-icon" src="assests/images/icon-dfs.png" alt="Data Analysis & Visualization" style="width: 150px; height: 150px;">
-</div>
+                <img class="service-icon" src="assests/images/icon-dfs.png" alt="Data Analysis & Visualization"
+                  style="width: 150px; height: 150px;">
+              </div>
 
               <div class="service-content-box">
                 <h4 class="h4 service-item-title">Demand Forecasting & Supply Chain Analytics</h4>
@@ -397,7 +402,7 @@
 
 
 
-    
+
 
       <article class="resume" data-page="resume">
 
@@ -680,48 +685,62 @@
           </div>
 
           <ul class="project-list">
-
             <li class="project-item active" data-filter-item data-category="full-stack web dev">
-              <a href="#">
+              <a href="#" data-project-modal-trigger="doms">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-
                   <img src="./assests/images/project-doms.png" alt="Order Management System" loading="lazy">
                 </figure>
-
                 <h3 class="project-title">Distributor Order Management – with Analytics</h3>
-
                 <p class="project-category">Full-Stack Web Dev</p>
               </a>
             </li>
 
             <li class="project-item active" data-filter-item data-category="business analytics">
-              <a href="#">
+              <a href="#" data-project-modal-trigger="rssa">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-
-                  <img src="./assests/images/project-rssa.png"
-                    alt="Retail Supermarket Sales Analysis" loading="lazy">
+                  <img src="./assests/images/project-rssa.png" alt="Retail Supermarket Sales Analysis" loading="lazy">
                 </figure>
-
                 <h3 class="project-title">Retail Supermarket Sales & Profit Analysis</h3>
-
                 <p class="project-category">Business Analytics</p>
               </a>
             </li>
-
-
-
           </ul>
 
         </section>
 
-      </article>
 
+
+      </article>
+      <div class="project-modal-container" data-project-modal-container>
+        <div class="project-modal">
+          <button class="modal-close-btn" data-project-modal-close-btn>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+
+          <div class="modal-content">
+            <img src="" alt="" class="modal-project-img" data-modal-project-img>
+
+            <h3 class="h3 modal-project-title" data-modal-project-title></h3>
+
+            <p class="modal-project-category" data-modal-project-category></p>
+
+            <p class="modal-project-description" data-modal-project-description></p>
+
+            <div class="modal-tech-stack" data-modal-tech-stack>
+              <h4 class="h4" style="color: var(--white-2); margin-bottom: 15px;">Tech Stack:</h4>
+              <div data-modal-tech-tags></div>
+            </div>
+
+            <div class="modal-project-links" data-modal-project-links></div>
+          </div>
+        </div>
+      </div>
 
 
 
