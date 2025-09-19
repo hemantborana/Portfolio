@@ -325,8 +325,8 @@ const projectData = {
     description: "A comprehensive web application designed to streamline distributor operations with integrated analytics. Features include real-time order tracking, inventory management, sales analytics, and automated reporting. Built with responsive design principles to ensure optimal performance across all devices.",
     techStack: ["HTML/CSS", "JavaScript", "APIs", "Excel Export"],
     links: [
-      { text: "Live Demo", url: "#", type: "primary", icon: "open-outline" },
-      { text: "Source Code", url: "#", type: "secondary", icon: "logo-github" }
+      { text: "Live Demo", url: "https://hemantborana.github.io/D-OMS/", type: "primary", icon: "open-outline" },
+      { text: "Source Code", url: "https://github.com/hemantborana/D-OMS-source", type: "secondary", icon: "logo-github" }
     ]
   },
   rssa: {
@@ -336,8 +336,8 @@ const projectData = {
     description: "Comprehensive data analytics project analyzing supermarket sales patterns, profit margins, and customer behavior. Utilized advanced Excel functions, pivot tables, and linear programming optimization to identify trends and provide actionable business insights for revenue optimization.",
     techStack: ["Excel", "Data Analysis", "Pivot Tables", "Linear Programming"],
     links: [
-      { text: "View Report", url: "#", type: "primary", icon: "document-outline" },
-      { text: "Source Code", url: "#", type: "secondary", icon: "logo-github" }
+      { text: "View Report", url: "https://github.com/hemantborana/Retail-Supermarket-Analytics/blob/main/Project_Files/Retail_Supermarket_Analysis_Report.docx", type: "primary", icon: "document-outline" },
+      { text: "Source Code", url: "https://github.com/hemantborana/Retail-Supermarket-Analytics-source", type: "secondary", icon: "logo-github" }
     ]
   }
 };
