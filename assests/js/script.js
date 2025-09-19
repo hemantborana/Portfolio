@@ -316,3 +316,108 @@ function resetButtonState(btn) {
     btn.style.backgroundColor = '';
     btn.style.opacity = '';
 }
+
+const projectData = {
+  doms: {
+    title: "Distributor Order Management – with Analytics",
+    category: "Full-Stack Web Dev",
+    image: "./assests/images/project-doms.png",
+    description: "A comprehensive web application designed to streamline distributor operations with integrated analytics. Features include real-time order tracking, inventory management, sales analytics, and automated reporting. Built with responsive design principles to ensure optimal performance across all devices.",
+    techStack: ["HTML/CSS", "JavaScript", "APIs", "Excel Export"],
+    links: [
+      { text: "Live Demo", url: "#", type: "primary", icon: "open-outline" },
+      { text: "Source Code", url: "#", type: "secondary", icon: "logo-github" }
+    ]
+  },
+  rssa: {
+    title: "Retail Supermarket Sales & Profit Analysis",
+    category: "Business Analytics",
+    image: "./assests/images/project-rssa.png",
+    description: "Comprehensive data analytics project analyzing supermarket sales patterns, profit margins, and customer behavior. Utilized advanced Excel functions, pivot tables, and linear programming optimization to identify trends and provide actionable business insights for revenue optimization.",
+    techStack: ["Excel", "Data Analysis", "Pivot Tables", "Linear Programming"],
+    links: [
+      { text: "View Report", url: "#", type: "primary", icon: "document-outline" },
+      { text: "Source Code", url: "#", type: "secondary", icon: "logo-github" }
+    ]
+  }
+};
+
+// Project Modal Functionality
+const projectModalContainer = document.querySelector('[data-project-modal-container]');
+const projectModalCloseBtn = document.querySelector('[data-project-modal-close-btn]');
+const projectModalTriggers = document.querySelectorAll('[data-project-modal-trigger]');
+
+// Modal elements
+const modalProjectImg = document.querySelector('[data-modal-project-img]');
+const modalProjectTitle = document.querySelector('[data-modal-project-title]');
+const modalProjectCategory = document.querySelector('[data-modal-project-category]');
+const modalProjectDescription = document.querySelector('[data-modal-project-description]');
+const modalTechTags = document.querySelector('[data-modal-tech-tags]');
+const modalProjectLinks = document.querySelector('[data-modal-project-links]');
+
+// Open modal
+projectModalTriggers.forEach(trigger => {
+  trigger.addEventListener('click', (e) => {
+    e.preventDefault();
+    const projectId = trigger.getAttribute('data-project-modal-trigger');
+    const project = projectData[projectId];
+    
+    if (project) {
+      // Populate modal content
+      modalProjectImg.src = project.image;
+      modalProjectImg.alt = project.title;
+      modalProjectTitle.textContent = project.title;
+      modalProjectCategory.textContent = project.category;
+      modalProjectDescription.textContent = project.description;
+      
+      // Tech stack tags
+      modalTechTags.innerHTML = '';
+      project.techStack.forEach(tech => {
+        const tag = document.createElement('span');
+        tag.className = 'tech-tag';
+        tag.textContent = tech;
+        modalTechTags.appendChild(tag);
+      });
+      
+      // Project links
+      modalProjectLinks.innerHTML = '';
+      project.links.forEach(link => {
+        const linkElement = document.createElement('a');
+        linkElement.href = link.url;
+        linkElement.target = '_blank';
+        linkElement.className = `modal-btn modal-btn-${link.type}`;
+        linkElement.innerHTML = `
+          <span>${link.text}</span>
+          <ion-icon name="${link.icon}"></ion-icon>
+        `;
+        modalProjectLinks.appendChild(linkElement);
+      });
+      
+      // Show modal
+      projectModalContainer.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+  });
+});
+
+// Close modal
+const closeProjectModal = () => {
+  projectModalContainer.classList.remove('active');
+  document.body.style.overflow = 'auto';
+};
+
+projectModalCloseBtn.addEventListener('click', closeProjectModal);
+
+// Close modal on overlay click
+projectModalContainer.addEventListener('click', (e) => {
+  if (e.target === projectModalContainer) {
+    closeProjectModal();
+  }
+});
+
+// Close modal on Escape key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && projectModalContainer.classList.contains('active')) {
+    closeProjectModal();
+  }
+});
