@@ -326,7 +326,7 @@ const projectData = {
     techStack: ["HTML/CSS", "JavaScript", "APIs", "Excel Export"],
     links: [
       { text: "Live Demo", url: "https://hemantborana.github.io/D-OMS/", type: "primary", icon: "open-outline" },
-      { text: "Source Code", url: "https://github.com/hemantborana/D-OMS-source", type: "secondary", icon: "logo-github" }
+      { text: "Source Code", url: "https://github.com/hemantborana/D-OMS", type: "secondary", icon: "logo-github" }
     ]
   },
   rssa: {
@@ -337,7 +337,7 @@ const projectData = {
     techStack: ["Excel", "Data Analysis", "Pivot Tables", "Linear Programming"],
     links: [
       { text: "View Report", url: "https://github.com/hemantborana/Retail-Supermarket-Analytics/blob/main/Project_Files/Retail_Supermarket_Analysis_Report.docx", type: "primary", icon: "document-outline" },
-      { text: "Source Code", url: "https://github.com/hemantborana/Retail-Supermarket-Analytics-source", type: "secondary", icon: "logo-github" }
+      { text: "Source Code", url: "https://github.com/hemantborana/Retail-Supermarket-Analytics", type: "secondary", icon: "logo-github" }
     ]
   }
 };
