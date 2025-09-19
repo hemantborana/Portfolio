@@ -1,1421 +1,805 @@
+<1-- new template html--></1-->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hemant Borana | Data Analyst Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class'
-        }
-    </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* Dark mode styles */
-        .dark {
-            --tw-bg-opacity: 1;
-            background-color: rgb(17 24 39 / var(--tw-bg-opacity));
-            color: rgb(229 231 235 / var(--tw-text-opacity));
-        }
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vCard - Personal Portfolio</title>
 
-        .dark .bg-white {
-            background-color: rgb(31 41 55 / var(--tw-bg-opacity));
-        }
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
 
-        .dark .bg-gray-50 {
-            background-color: rgb(17 24 39 / var(--tw-bg-opacity));
-        }
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
 
-        .dark .text-gray-600,
-        .dark .text-gray-800 {
-            color: rgb(209 213 219 / var(--tw-text-opacity));
-        }
-
-        .dark .bg-blue-50 {
-            background-color: rgb(30 58 138 / 0.2);
-        }
-
-        /* Custom CSS for animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .fade-in {
-            animation: fadeIn 1s ease-out forwards;
-        }
-
-        .delay-1 {
-            animation-delay: 0.2s;
-        }
-
-        .delay-2 {
-            animation-delay: 0.4s;
-        }
-
-        .delay-3 {
-            animation-delay: 0.6s;
-        }
-
-        .delay-4 {
-            animation-delay: 0.8s;
-        }
-
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #3b82f6;
-            border-radius: 4px;
-        }
-
-        /* Project card hover effect */
-        .project-card {
-            transition: all 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Active nav link */
-        .nav-link.active {
-            color: #3b82f6;
-            font-weight: 600;
-        }
-    </style>
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Add these scripts before closing </head> tag -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
-<body class="bg-gray-50 font-sans text-gray-800">
-    <!-- Navigation -->
-    <nav class="fixed w-full bg-white shadow-sm z-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <span class="text-xl font-bold text-blue-600">Hemant Borana</span>
-                </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <button id="theme-toggle"
-                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">
-                        <i class="fas fa-moon dark:hidden"></i>
-                        <i class="fas fa-sun hidden dark:block"></i>
-                    </button>
-                    <a href="#home" class="nav-link active text-sm font-medium hover:text-blue-600 transition">Home</a>
-                    <a href="#about" class="nav-link text-sm font-medium hover:text-blue-600 transition">About</a>
-                    <a href="#skills" class="nav-link text-sm font-medium hover:text-blue-600 transition">Skills</a>
-                    <a href="#projects" class="nav-link text-sm font-medium hover:text-blue-600 transition">Projects</a>
-                    <a href="#education"
-                        class="nav-link text-sm font-medium hover:text-blue-600 transition">Education</a>
-                    <a href="#contact" class="nav-link text-sm font-medium hover:text-blue-600 transition">Contact</a>
-                </div>
-                <div class="md:hidden flex items-center">
-                    <button id="menu-btn" class="text-gray-600 hover:text-blue-600 focus:outline-none">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
-                </div>
-            </div>
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+  <img src="./assets/images/profile.jpeg" alt="Hemant Borana" width="80" style="border-radius: 20px;">
+</figure>
+
+
+        <div class="info-content">
+          <h1 class="name" title="Hemant Borana">Hemant Borana</h1>
+
+          <p class="title">Aspiring Data Analyst</p>
         </div>
 
-        <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#home"
-                    class="nav-link active block px-3 py-2 rounded-md text-base font-medium hover:text-blue-600 hover:bg-gray-50">Home</a>
-                <a href="#about"
-                    class="nav-link block px-3 py-2 rounded-md text-base font-medium hover:text-blue-600 hover:bg-gray-50">About</a>
-                <a href="#skills"
-                    class="nav-link block px-3 py-2 rounded-md text-base font-medium hover:text-blue-600 hover:bg-gray-50">Skills</a>
-                <a href="#projects"
-                    class="nav-link block px-3 py-2 rounded-md text-base font-medium hover:text-blue-600 hover:bg-gray-50">Projects</a>
-                <a href="#education"
-                    class="nav-link block px-3 py-2 rounded-md text-base font-medium hover:text-blue-600 hover:bg-gray-50">Education</a>
-                <a href="#contact"
-                    class="nav-link block px-3 py-2 rounded-md text-base font-medium hover:text-blue-600 hover:bg-gray-50">Contact</a>
-            </div>
-        </div>
-    </nav>
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
 
-    <!-- Hero Section -->
-    <section id="home"
-        class="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-900">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-10 md:mb-0 fade-in">
-                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 dark:text-gray-100 mb-4">Hi, I'm <span
-                            class="text-blue-600 dark:text-blue-400">Hemant Borana</span></h1>
-                    <h2 class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-6">Data Analytics Intern | BCA Final Year | Business Analytics Enthusiast</h2>
-                    <p class="text-gray-600 dark:text-gray-300 mb-8 max-w-lg">Passionate about transforming raw data
-                        into meaningful insights. Specializing in Python, SQL, and data visualization tools. Seeking
-                        opportunities to apply analytical skills to solve real-world business challenges.</p>
-                    <div class="flex space-x-4">
-                        <a href="#contact"
-                            class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition shadow-md hover:shadow-lg">Contact
-                            Me</a>
-                        <a href="#projects"
-                            class="border border-blue-600 text-blue-600 hover:bg-blue-50 dark:hover:bg-gray-700 px-6 py-3 rounded-lg font-medium transition dark:text-blue-400 dark:border-blue-400">View
-                            Projects</a>
-                    </div>
-                </div>
-                <div class="md:w-1/2 flex justify-center fade-in delay-1">
-                    <div
-                        class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white dark:border-gray-700 shadow-xl">
-                        <!-- Replace with your image -->
-                        <img src="images/profilepic.jpg" alt="Hemant Borana" class="w-full h-full object-cover"
-                            style="margin-top: 1cm; overflow:visible;">
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
 
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+      </div>
 
-    <!-- About Section -->
-    <!-- About Section -->
-<section id="about" class="py-16 bg-white dark:bg-gray-800">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-bold text-center mb-12 fade-in dark:text-gray-100">About <span
-                class="text-blue-600 dark:text-blue-400">Me</span></h2>
-        <div class="flex flex-col md:flex-row items-start gap-8">
-            <div class="md:w-1/3 mb-8 md:mb-0 fade-in delay-1 h-full">
-                <div class="bg-gray-100 dark:bg-gray-700 p-6 rounded-xl shadow-md mb-6">
-                    <h3 class="text-xl font-semibold mb-4 text-blue-600 dark:text-blue-400">Personal Info</h3>
-                    <ul class="space-y-3">
-                        <li class="flex items-center dark:text-gray-300">
-                            <i class="fas fa-user mr-3 text-blue-500 dark:text-blue-400"></i>
-                            <span><strong>Name:</strong> Hemant Parasmal Borana</span>
-                        </li>
-                        <li class="flex items-center dark:text-gray-300">
-                            <i class="fas fa-envelope mr-3 text-blue-500 dark:text-blue-400"></i>
-                            <span><strong>Email:</strong> hemantpb123@gmail.com</span>
-                        </li>
-                        <li class="flex items-center dark:text-gray-300">
-                            <i class="fas fa-phone mr-3 text-blue-500 dark:text-blue-400"></i>
-                            <span><strong>Phone:</strong> +91 9284494154</span>
-                        </li>
-                        <li class="flex items-center dark:text-gray-300">
-                            <i class="fas fa-map-marker-alt mr-3 text-blue-500 dark:text-blue-400"></i>
-                            <span><strong>Location:</strong> Goa, India</span>
-                        </li>
-                        <li class="flex items-center dark:text-gray-300">
-                            <i class="fas fa-briefcase mr-3 text-blue-500 dark:text-blue-400"></i>
-                            <span><strong>Current Role:</strong> Data Analytics Intern</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- Core Strengths -->
-                <div class="bg-gray-100 dark:bg-gray-700 p-6 rounded-xl shadow-md">
-                    <h3 class="text-xl font-semibold mb-4 text-blue-600 dark:text-blue-400">Core Strengths</h3>
-                    <div class="space-y-3">
-                        <div class="flex items-center dark:text-gray-300">
-                            <i class="fas fa-lightbulb mr-3 text-blue-500 dark:text-blue-400"></i>
-                            <span>Analytical Thinker</span>
-                        </div>
-                        <div class="flex items-center dark:text-gray-300">
-                            <i class="fas fa-users mr-3 text-green-500 dark:text-green-400"></i>
-                            <span>Team Collaborator</span>
-                        </div>
-                        <div class="flex items-center dark:text-gray-300">
-                            <i class="fas fa-rocket mr-3 text-purple-500 dark:text-purple-400"></i>
-                            <span>Quick Learner</span>
-                        </div>
-                        <div class="flex items-center dark:text-gray-300">
-                            <i class="fas fa-search mr-3 text-orange-500 dark:text-orange-400"></i>
-                            <span>Detail Oriented</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="md:w-2/3 fade-in delay-2 h-full">
-                <h3 class="text-2xl font-semibold mb-4 dark:text-gray-100">Data Analytics Enthusiast with Real-World Business Exposure</h3>
-                <p class="text-gray-600 dark:text-gray-300 mb-4">
-                    Currently pursuing my final year of BCA at Amity University Online with a specialization in Data Analytics, while gaining hands-on industry experience as a Data Analytics Intern at TCS iON. My journey combines academic rigor with practical application in retail demand forecasting and business analytics.
-                </p>
-                <p class="text-gray-600 dark:text-gray-300 mb-4">
-                    What sets me apart is my unique blend of technical skills and commercial acumen, developed through active involvement in my family's wholesale garments distribution business. This real-world exposure to brand management, inventory planning, and retail analytics for premium fashion brands has given me invaluable insights into how data drives business decisions.
-                </p>
-                <p class="text-gray-600 dark:text-gray-300 mb-6">
-                    I'm passionate about transforming raw data into actionable insights that solve real business challenges. My approach combines statistical analysis, data visualization, and business intelligence to tell compelling data stories that drive strategic decisions.
-                </p>
-                
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="bg-blue-50 dark:bg-gray-700 px-4 py-3 rounded-lg">
-                        <div class="flex items-center">
-                            <i class="fas fa-chart-line text-blue-500 dark:text-blue-400 mr-2"></i>
-                            <span class="dark:text-gray-300 font-medium">Industry Experience</span>
-                        </div>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">TCS iON Analytics Intern</p>
-                    </div>
-                    <div class="bg-blue-50 dark:bg-gray-700 px-4 py-3 rounded-lg">
-                        <div class="flex items-center">
-                            <i class="fas fa-store text-blue-500 dark:text-blue-400 mr-2"></i>
-                            <span class="dark:text-gray-300 font-medium">Business Acumen</span>
-                        </div>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">B2B Distribution Exposure</p>
-                    </div>
-                    <div class="bg-blue-50 dark:bg-gray-700 px-4 py-3 rounded-lg">
-                        <div class="flex items-center">
-                            <i class="fas fa-graduation-cap text-blue-500 dark:text-blue-400 mr-2"></i>
-                            <span class="dark:text-gray-300 font-medium">Academic Focus</span>
-                        </div>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">Data Analytics Specialization</p>
-                    </div>
-                    <div class="bg-blue-50 dark:bg-gray-700 px-4 py-3 rounded-lg">
-                        <div class="flex items-center">
-                            <i class="fas fa-target text-blue-500 dark:text-blue-400 mr-2"></i>
-                            <span class="dark:text-gray-300 font-medium">Career Goal</span>
-                        </div>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">Data-Driven Solutions</p>
-                    </div>
-                </div>
+      <div class="sidebar-info_more">
 
-                
-            </div>
-        </div>
-    </div>
-</section>
+        <div class="separator"></div>
 
-    <!-- Experience Section - ADD THIS AFTER THE ABOUT SECTION -->
-<section id="experience" class="py-16 bg-gray-50 dark:bg-gray-800">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-bold text-center mb-12 fade-in dark:text-gray-100">My <span class="text-blue-600 dark:text-blue-400">Experience</span></h2>
+        <ul class="contacts-list">
 
-        <div class="space-y-8">
-            <!-- TCS iON Internship -->
-            <div class="bg-white dark:bg-gray-700 rounded-xl shadow-md p-6 fade-in delay-1">
-                <div class="flex items-start space-x-4">
-                    <div class="bg-blue-600 text-white p-3 rounded-full flex-shrink-0">
-                        <i class="fas fa-chart-line text-xl"></i>
-                    </div>
-                    <div class="flex-1">
-                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-                            <h3 class="text-xl font-semibold text-blue-600 dark:text-blue-400">Data Analytics Intern</h3>
-                            <span class="text-sm text-gray-500 dark:text-gray-400 mt-1 md:mt-0">Jul 2025 - Present</span>
-                        </div>
-                        <p class="text-gray-600 dark:text-gray-300 font-medium mb-3">TCS iON • Remote</p>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">Participating in TCS iON RIO-125, a 125-hour industry internship program focused on retail demand forecasting and data analytics.</p>
-                        <div class="space-y-2">
-                            <div class="flex items-start">
-                                <i class="fas fa-check-circle text-green-500 mr-2 mt-1 flex-shrink-0"></i>
-                                <span class="text-gray-600 dark:text-gray-300">Working on projects involving forecasting systems and analyzing historical data to predict product demand at retail outlets</span>
-                            </div>
-                            <div class="flex items-start">
-                                <i class="fas fa-check-circle text-green-500 mr-2 mt-1 flex-shrink-0"></i>
-                                <span class="text-gray-600 dark:text-gray-300">Gaining hands-on experience with data analysis tools while receiving guidance from industry mentors</span>
-                            </div>
-                            <div class="flex items-start">
-                                <i class="fas fa-check-circle text-green-500 mr-2 mt-1 flex-shrink-0"></i>
-                                <span class="text-gray-600 dark:text-gray-300">Participating in structured webinars and learning modules focused on real-world retail analytics</span>
-                            </div>
-                        </div>
-                        <div class="flex flex-wrap gap-2 mt-4">
-                            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">Data Analytics</span>
-                            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">Demand Forecasting</span>
-                            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">Retail Analytics</span>
-                            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">Python</span>
-                        </div>
-                    </div>
-                </div>
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
             </div>
 
-            <!-- Business Background -->
-            <!-- Business Background - CORRECTED VERSION -->
-<div class="bg-white dark:bg-gray-700 rounded-xl shadow-md p-6 fade-in delay-2">
-    <div class="flex items-start space-x-4">
-        <div class="bg-green-600 text-white p-3 rounded-full flex-shrink-0">
-            <i class="fas fa-store text-xl"></i>
-        </div>
-        <div class="flex-1">
-            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-                <h3 class="text-xl font-semibold text-green-600 dark:text-green-400">Wholesale Distribution & Business Background</h3>
-                <span class="text-sm text-gray-500 dark:text-gray-400 mt-1 md:mt-0">2021 - Present</span>
-            </div>
-            <p class="text-gray-600 dark:text-gray-300 font-medium mb-3">HREENKAR CREATION • Mapusa, Goa</p>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">Active involvement in family wholesale garments distribution business across multiple entities (Hreenkar Creation & Kambeshwar Agencies), gaining practical B2B commercial experience and supply chain analytics exposure.</p>
-            <div class="space-y-2">
-                <div class="flex items-start">
-                    <i class="fas fa-check-circle text-green-500 mr-2 mt-1 flex-shrink-0"></i>
-                    <span class="text-gray-600 dark:text-gray-300">Hands-on exposure to wholesale distribution operations, brand management, and B2B sales for premium fashion brands</span>
-                </div>
-                <div class="flex items-start">
-                    <i class="fas fa-check-circle text-green-500 mr-2 mt-1 flex-shrink-0"></i>
-                    <span class="text-gray-600 dark:text-gray-300">Practical understanding of demand forecasting and inventory planning through daily wholesale operations and seasonal trend analysis</span>
-                </div>
-                <div class="flex items-start">
-                    <i class="fas fa-check-circle text-green-500 mr-2 mt-1 flex-shrink-0"></i>
-                    <span class="text-gray-600 dark:text-gray-300">Distribution experience with premium brands including ENAMOR, Levi's, One8, Lux Cozi, Dixcy Scott across retail network</span>
-                </div>
-                <div class="flex items-start">
-                    <i class="fas fa-check-circle text-green-500 mr-2 mt-1 flex-shrink-0"></i>
-                    <span class="text-gray-600 dark:text-gray-300">Developed strong business acumen through Marwadi business family background and multi-tier distribution channel management</span>
-                </div>
-            </div>
-            <div class="flex flex-wrap gap-2 mt-4">
-                <span class="bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs px-3 py-1 rounded-full">Wholesale Distribution</span>
-                <span class="bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs px-3 py-1 rounded-full">B2B Sales</span>
-                <span class="bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs px-3 py-1 rounded-full">Brand Management</span>
-                <span class="bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs px-3 py-1 rounded-full">Inventory Planning</span>
-                <span class="bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs px-3 py-1 rounded-full">Supply Chain Analytics</span>
-            </div>
-        </div>
-    </div>
-</div>
-        </div>
-    </div>
-</section>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
 
-   <!-- Skills Section -->
-<section id="skills" class="py-16 bg-gray-50 dark:bg-gray-800">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-bold text-center mb-12 fade-in dark:text-gray-100">My <span class="text-blue-600 dark:text-blue-400">Skills</span></h2>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 fade-in delay-1">
-            <!-- Technical Skills -->
-            <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md">
-                <h3 class="text-xl font-semibold mb-6 text-blue-600 dark:text-blue-400 flex items-center">
-                    <i class="fas fa-code mr-3"></i> Technical Skills
-                </h3>
-                <div class="space-y-4">
-                    <div>
-                        <div class="flex justify-between mb-1">
-                            <span class="font-medium dark:text-gray-300">Python</span>
-                            <span class="text-blue-600 dark:text-blue-400 font-medium">Learning</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-600">
-                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 25%"></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between mb-1">
-                            <span class="font-medium dark:text-gray-300">SQL</span>
-                            <span class="text-blue-600 dark:text-blue-400 font-medium">Learning</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-600">
-                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 25%"></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between mb-1">
-                            <span class="font-medium dark:text-gray-300">Excel</span>
-                            <span class="text-blue-600 dark:text-blue-400 font-medium">Intermediate</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-600">
-                            <div class="bg-blue-600 h-2.5 rounded-full" style="width:65%"></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between mb-1">
-                            <span class="font-medium dark:text-gray-300">Data Visualization</span>
-                            <span class="text-blue-600 dark:text-blue-400 font-medium">Beginner</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-600">
-                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 35%"></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between mb-1">
-                            <span class="font-medium dark:text-gray-300">Statistics</span>
-                            <span class="text-blue-600 dark:text-blue-400 font-medium">Basic</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-600">
-                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 30%"></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between mb-1">
-                            <span class="font-medium dark:text-gray-300">AI Prompting</span>
-                            <span class="text-blue-600 dark:text-blue-400 font-medium">Strong</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-600">
-                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 78%"></div>
-                        </div>
-                    </div>
-                </div>
+              <a href="mailto:hemantpb123@gmail.com" class="contact-link">hemantpb123@gmail.com</a>
             </div>
 
-            <!-- Professional Skills -->
-            <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md">
-                <h3 class="text-xl font-semibold mb-6 text-blue-600 dark:text-blue-400 flex items-center">
-                    <i class="fas fa-user-tie mr-3"></i> Professional Skills
-                </h3>
-                <div class="space-y-4">
-                    <div>
-                        <div class="flex justify-between mb-1">
-                            <span class="font-medium dark:text-gray-300">Communication</span>
-                            <span class="text-blue-600 dark:text-blue-400 font-medium">Basic</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-600">
-                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 45%"></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between mb-1">
-                            <span class="font-medium dark:text-gray-300">Teamwork</span>
-                            <span class="text-blue-600 dark:text-blue-400 font-medium">Basic</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-600">
-                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 40%"></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between mb-1">
-                            <span class="font-medium dark:text-gray-300">Problem Solving</span>
-                            <span class="text-blue-600 dark:text-blue-400 font-medium">Intermediate</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-600">
-                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 60%"></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between mb-1">
-                            <span class="font-medium dark:text-gray-300">Time Management</span>
-                            <span class="text-blue-600 dark:text-blue-400 font-medium">Intermediate</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-600">
-                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 65%"></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between mb-1">
-                            <span class="font-medium dark:text-gray-300">Creativity</span>
-                            <span class="text-blue-600 dark:text-blue-400 font-medium">Intermediate</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-600">
-                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 55%"></div>
-                        </div>
-                    </div>
-                     <div>
-                        <div class="flex justify-between mb-1">
-                            <span class="font-medium dark:text-gray-300">Business Acumen</span>
-                            <span class="text-blue-600 dark:text-blue-400 font-medium">Intermediate</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-600">
-                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 55%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+          </li>
 
-        <!-- Tools & Technologies -->
-        <div class="mt-12 fade-in delay-2">
-            <h3 class="text-xl font-semibold mb-6 text-center text-blue-600 dark:text-blue-400">Tools & Technologies</h3>
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                <div class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md">
-                    <i class="fab fa-python text-4xl text-blue-600 mb-2"></i>
-                    <span class="text-sm font-medium dark:text-gray-300">Python</span>
-                    <span class="text-xs text-gray-500 dark:text-gray-400 mt-1">Basic</span>
-                </div>
-                <div class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md">
-                    <i class="fas fa-database text-4xl text-blue-700 mb-2"></i>
-                    <span class="text-sm font-medium dark:text-gray-300">SQL</span>
-                    <span class="text-xs text-gray-500 dark:text-gray-400 mt-1">Basic</span>
-                </div>
-                <div class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md">
-                    <i class="fas fa-file-excel text-4xl text-green-600 mb-2"></i>
-                    <span class="text-sm font-medium dark:text-gray-300">Excel</span>
-                    <span class="text-xs text-gray-500 dark:text-gray-400 mt-1">Intermediate</span>
-                </div>
-                <div class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md">
-                    <i class="fas fa-chart-line text-4xl text-purple-600 mb-2"></i>
-                    <span class="text-sm font-medium dark:text-gray-300">Data Viz</span>
-                    <span class="text-xs text-gray-500 dark:text-gray-400 mt-1">Intermediate</span>
-                </div>
-                <div class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md">
-                    <i class="fas fa-brain text-4xl text-indigo-600 mb-2"></i>
-                    <span class="text-sm font-medium dark:text-gray-300">AI Prompting</span>
-                    <span class="text-xs text-gray-500 dark:text-gray-400 mt-1">Intermediate</span>
-                </div>
-                <div class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md">
-                    <i class="fab fa-github text-4xl text-gray-800 dark:text-gray-300 mb-2"></i>
-                    <span class="text-sm font-medium dark:text-gray-300">GitHub</span>
-                    <span class="text-xs text-gray-500 dark:text-gray-400 mt-1">Intermediate</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-    <!-- Projects Section -->
-    <section id="projects" class="py-16 bg-white">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-bold text-center mb-12 fade-in">My <span class="text-blue-600">Projects</span></h2>
+          <li class="contact-item">
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Project 4 - Order Management System -->
-            <div
-                class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition fade-in delay-3">
-                <div class="h-48 overflow-hidden">
-                    <img src="images/oms(p1).jpg" alt="Order Management System" class="w-full h-full object-cover">
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2">Distributor Order Management – with Analytics</h3>
-                    <p class="text-gray-600 mb-4">Responsive web app to manage retailer orders, stock status, and order
-                        progress. Includes basic analytics for sales trends and exportable reports.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">HTML/CSS</span>
-                        <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">JavaScript</span>
-                        <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">APIs</span>
-                        <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Excel Export</span>
-                    </div>
-                    <div class="flex space-x-3">
-                        <a href="https://hemantborana.github.io/D-OMS/"
-                            class="text-blue-600 hover:text-blue-800 flex items-center" target="_blank">
-                            <i class="fas fa-external-link-alt mr-1"></i> Live Demo
-                        </a>
-                        <a href="https://github.com/hemantborana/D-OMS"
-                            class="text-gray-600 hover:text-gray-800 flex items-center" target="_blank">
-                            <i class="fab fa-github mr-1"></i> Source Code
-                        </a>
-                    </div>
-                </div>
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
             </div>
 
-            <!-- Project 5 - Retail Supermarket Sales & Profit Analysis -->
-            <div
-                class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition fade-in delay-4">
-                <div class="h-48 overflow-hidden">
-                    <img src="images/retail-supermarket.jpg" alt="Retail Supermarket Sales Analysis"
-                        class="w-full h-full object-cover">
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2">Retail Supermarket Sales & Profit Analysis</h3>
-                    <p class="text-gray-600 mb-4">Data analytics project analyzing supermarket sales, profits, and
-                        customer behavior using Excel dashboards and Linear Programming optimization.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Excel</span>
-                        <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Data Analysis</span>
-                        <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Pivot Tables</span>
-                        <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Linear Programming</span>
-                    </div>
-                    <div class="flex space-x-3">
-                        <a href="https://github.com/hemantborana/Retail-Supermarket-Analytics"
-                            class="text-gray-600 hover:text-gray-800 flex items-center" target="_blank">
-                            <i class="fab fa-github mr-1"></i> Source Code
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
 
-        <div class="text-center mt-12 fade-in delay-3">
-            <a href="https://github.com/hemantborana?tab=repositories"
-                class="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition"
-                target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-github mr-2"></i> View All Projects on GitHub
+              <a href="tel:+919284494154" class="contact-link">+91 9284494154</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="2005-02-21">21 Feb, 2005</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Goa, India</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
             </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p><strong class="bold-brand">
+              Data Analytics Enthusiast with Real-World Business Exposure
+            </strong></p>
+
+          <p>
+            I'm a final-year BCA (Data Analytics) student at Amity University Online, recently completed a data
+            analytics internship at TCS iON where I worked on retail demand forecasting and business intelligence. This
+            experience sharpened my ability to turn raw data into strategic insights using statistical analysis and
+            visualization.
+
+          <p>
+            Alongside academics, I actively contribute to my family's wholesale garments distribution business, gaining
+            firsthand exposure to brand management, inventory planning, and retail analytics for premium fashion labels.
+            This blend of technical expertise and commercial insight gives me a unique edge in solving real-world
+            business challenges through data.
+          </p>
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+          <h3 class="h3 service-title">What I'm Doing</h3>
+
+          <ul class="service-list">
+            <li class="service-item">
+              <div class="service-icon-box">
+  <img class="service-icon" src="assets/images/icon-dav.png" alt="Data Analysis & Visualization" style="width: 150px; height: 150px;">
+</div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Data Analysis & Visualization</h4>
+                <p class="service-item-text">
+                  Transform raw data into actionable insights using Python, SQL, and Excel. Create compelling dashboards
+                  and visualizations that tell data-driven stories.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+               <div class="service-icon-box">
+  <img class="service-icon" src="assets/images/icon-bia.png" alt="Data Analysis & Visualization" style="width: 150px; height: 150px;">
+</div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Business Intelligence & Analytics</h4>
+                <p class="service-item-text">
+                  Leverage business analytics expertise from wholesale distribution background to provide strategic
+                  insights for retail and B2B operations.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+             <div class="service-icon-box">
+  <img class="service-icon" src="assets/images/icon-wda.png" alt="Data Analysis & Visualization" style="width: 150px; height: 150px;">
+</div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web Development & Automation</h4>
+                <p class="service-item-text">
+                  Build responsive web applications and automation tools using HTML, CSS, JavaScript, and APIs to
+                  streamline business processes.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+  <img class="service-icon" src="assets/images/icon-dfs.png" alt="Data Analysis & Visualization" style="width: 150px; height: 150px;">
+</div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Demand Forecasting & Supply Chain Analytics</h4>
+                <p class="service-item-text">
+                  Apply machine learning and statistical methods for retail demand forecasting, inventory optimization,
+                  and supply chain analytics based on real industry experience.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!--
+          
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+              </figure>
+
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+            </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+
+              <time datetime="2021-06-14">14 June, 2021</time>
+
+              <div data-modal-text>
+                <p>
+                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                  lot of experience
+                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                  consectetur adipiscing
+                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                </p>
+              </div>
+
+            </div>
+
+          </section>
+
         </div>
+
+        <!--
+          - clients
+        -->
+        <!--
+        <section class="clients">
+
+          <h3 class="h3 clients-title">Clients</h3>
+
+          <ul class="clients-list has-scrollbar">
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-1-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-2-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-3-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-4-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-5-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-6-color.png" alt="client logo">
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+      -->
+      </article>
+
+
+
+
+
+    
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Bachelor of Computer Applications (BCA)</h4>
+              <span>2023 — 2026</span>
+              <p class="timeline-text">
+                Pursuing BCA from Amity University Online with specialization in Data Analytics. Currently maintaining a
+                CGPA of 7.42 as of Semester IV. Focusing on relevant courses including Data Mining, Data Modeling, Data
+                Warehousing, and Probability & Statistics.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Higher Secondary (12th)</h4>
+              <span>2021 — 2023</span>
+              <p class="timeline-text">
+                Completed Higher Secondary education from Dnyanprassarak Mandal's P.V.S. Sarojini Madhusudan Kushe
+                Higher Secondary School with Computer Science stream. Achieved 71% and learned fundamentals of
+                programming and computer applications.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Secondary School (10th)</h4>
+              <span>2021</span>
+              <p class="timeline-text">
+                Completed Secondary education from Dnyanprassarak Vidyalaya with distinction, achieving 75%. Developed
+                strong foundation in mathematics and logical reasoning which laid the groundwork for pursuing computer
+                science.
+              </p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="briefcase-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Data Analytics Intern</h4>
+              <span>Jul 2025 — Sep 2025</span>
+              <p class="timeline-text">
+                Completed TCS iON RiO-125, a 125-hour industry internship program focused on retail demand forecasting
+                and data analytics. Worked on projects involving forecasting systems and analyzing historical data to
+                predict product demand at retail outlets. Gained hands-on experience with data analysis tools while
+                receiving guidance from industry mentors.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Family Business Support (Part-time)</h4>
+              <span>2021 — Ongoing</span>
+              <p class="timeline-text">
+                Assisting with family wholesale garments distribution business (HREENKAR CREATION) across multiple
+                entities in Mapusa, Goa. Gaining practical B2B commercial experience and supply chain analytics exposure
+                through hands-on involvement in wholesale distribution operations, brand management, and B2B sales for
+                premium fashion brands including ENAMOR, Levi's, One8, Lux Cozi, and Dixcy Scott.
+              </p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="skill">
+          <h3 class="h3 skills-title">My skills</h3>
+
+          <!-- Technical Skills Card -->
+          <div class="skills-category">
+            <h4 class="h4">Technical Skills</h4>
+            <ul class="skills-list content-card">
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Python</h5>
+                  <data value="40">40%</data>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 40%;"></div>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">SQL</h5>
+                  <data value="40">40%</data>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 40%;"></div>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Excel</h5>
+                  <data value="70">70%</data>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 70%;"></div>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Data Visualization</h5>
+                  <data value="30">30%</data>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 30%;"></div>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Statistics</h5>
+                  <data value="50">50%</data>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 50%;"></div>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">AI Prompting</h5>
+                  <data value="85">85%</data>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 85%;"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Professional Skills Card -->
+          <div class="skills-category">
+            <h4 class="h4">Professional Skills</h4>
+            <ul class="skills-list content-card">
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Communication</h5>
+                  <data value="60">60%</data>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 80%;"></div>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Problem Solving</h5>
+                  <data value="75">75%</data>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 75%;"></div>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Time Management</h5>
+                  <data value="70">70%</data>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 70%;"></div>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Creativity</h5>
+                  <data value="65">65%</data>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 70%;"></div>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Business Acumen</h5>
+                  <data value="70">70%</data>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 70%;"></div>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Teamwork</h5>
+                  <data value="50">50%</data>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 50%;"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Full-Stack Web Dev</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Business Analytics</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Full-Stack Web Dev</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Business Analytics</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item active" data-filter-item data-category="full-stack web dev">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-doms.png" alt="Order Management System" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Distributor Order Management – with Analytics</h3>
+
+                <p class="project-category">Full-Stack Web Dev</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="business analytics">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-rssa.png"
+                    alt="Retail Supermarket Sales Analysis" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Retail Supermarket Sales & Profit Analysis</h3>
+
+                <p class="project-category">Business Analytics</p>
+              </a>
+            </li>
+
+
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #BLOG
+      -->
+
+
+
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32214.849093461544!2d73.8152293255395!3d15.602893677001978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfeae2fae1f7d9%3A0x7017bd171e9745a4!2sMapusa%2C%20Goa!5e0!3m2!1sen!2sin!4v1758259800969!5m2!1sen!2sin"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form id="contact-form" class="form" data-form>
+            <div class="input-wrapper">
+              <input type="text" id="name" name="name" class="form-input" placeholder="Full name" required
+                data-form-input>
+              <input type="email" id="email" name="email" class="form-input" placeholder="Email address" required
+                data-form-input>
+            </div>
+
+            <input type="text" id="subject" name="subject" class="form-input" placeholder="Subject" required
+              data-form-input>
+
+            <textarea id="message" name="message" class="form-input" placeholder="Your Message" required
+              data-form-input></textarea>
+
+            <button class="form-btn" type="submit" data-form-btn>
+              <span>Send Message</span>
+              <ion-icon name="paper-plane"></ion-icon>
+            </button>
+          </form>
+        </section>
+
+      </article>
+
     </div>
-</section>
 
+  </main>
 
-   <!-- Education Section -->
-<section id="education" class="py-16 bg-gray-50 dark:bg-gray-800">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-bold text-center mb-12 fade-in dark:text-gray-100">My <span class="text-blue-600 dark:text-blue-400">Education</span></h2>
 
-        <!-- Desktop Timeline View (hidden on mobile) -->
-        <div class="hidden md:block relative">
-            <!-- Timeline -->
-            <div class="border-l-2 border-blue-200 absolute h-full top-0 left-1/2 transform -translate-x-1/2"></div>
 
-            <!-- Education Item 1 -->
-            <div class="mb-8 fade-in delay-1">
-                <div class="flex items-center justify-between relative">
-                    <div class="w-5/12 pr-4 text-right">
-                        <h3 class="text-xl font-semibold dark:text-gray-200">Bachelor of Computer Applications (BCA)</h3>
-                        <p class="text-gray-600 dark:text-gray-300">Amity University Online</p>
-                        <p class="text-sm text-gray-500 dark:text-gray-400">2023 - 2026</p>
-                    </div>
-                    <div class="w-8 h-8 bg-blue-600 rounded-full z-10 flex items-center justify-center absolute left-1/2 transform -translate-x-1/2">
-                        <i class="fas fa-graduation-cap text-white"></i>
-                    </div>
-                    <div class="w-5/12 pl-4">
-                        <p class="text-gray-600 dark:text-gray-300">Specialization in Data Analytics. CGPA: 7.42 (as of Semester IV)</p>
-                        <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">Relevant Courses: Data Mining, Data Modeling, Data Warehousing, Probability & Statistics</p>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Education Item 2 -->
-            <div class="mb-8 fade-in delay-2">
-                <div class="flex items-center justify-between relative">
-                    <div class="w-5/12 pr-4 text-right">
-                        <h3 class="text-xl font-semibold dark:text-gray-200">Higher Secondary (12th)</h3>
-                        <p class="text-gray-600 dark:text-gray-300">Dnyanprassarak Mandal's P.V.S. Sarojini Madhusudan Kushe Higher Secondary School</p>
-                        <p class="text-sm text-gray-500 dark:text-gray-400">2021 - 2023</p>
-                    </div>
-                    <div class="w-8 h-8 bg-blue-600 rounded-full z-10 flex items-center justify-center absolute left-1/2 transform -translate-x-1/2">
-                        <i class="fas fa-school text-white"></i>
-                    </div>
-                    <div class="w-5/12 pl-4">
-                        <p class="text-gray-600 dark:text-gray-300">Completed with Computer Science stream. Percentage: 71%</p>
-                        <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">Learned fundamentals of programming and computer applications</p>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Education Item 3 -->
-            <div class="mb-8 fade-in delay-3">
-                <div class="flex items-center justify-between relative">
-                    <div class="w-5/12 pr-4 text-right">
-                        <h3 class="text-xl font-semibold dark:text-gray-200">Secondary School (10th)</h3>
-                        <p class="text-gray-600 dark:text-gray-300">Dnyanprassarak Vidyalaya</p>
-                        <p class="text-sm text-gray-500 dark:text-gray-400">2021</p>
-                    </div>
-                    <div class="w-8 h-8 bg-blue-600 rounded-full z-10 flex items-center justify-center absolute left-1/2 transform -translate-x-1/2">
-                        <i class="fas fa-book text-white"></i>
-                    </div>
-                    <div class="w-5/12 pl-4">
-                        <p class="text-gray-600 dark:text-gray-300">Completed with distinction. Percentage: 75%</p>
-                        <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">Developed strong foundation in mathematics and logical reasoning</p>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <!-- Mobile Card View (hidden on desktop) -->
-        <div class="md:hidden space-y-6">
-            <!-- Education Item 1 -->
-            <div class="fade-in delay-1 bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md">
-                <div class="flex items-start">
-                    <div class="bg-blue-600 text-white p-3 rounded-full mr-4">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-semibold dark:text-gray-200">Bachelor of Computer Applications (BCA)</h3>
-                        <p class="text-gray-600 dark:text-gray-300">Amity University Online</p>
-                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">2023 - 2026</p>
-                        <p class="text-gray-600 dark:text-gray-300">Specialization in Data Analytics. CGPA: 7.38 (as of Semester III)</p>
-                        <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">Relevant Courses: Data Mining, Data Modeling, Data Warehousing, Probability & Statistics</p>
-                    </div>
-                </div>
-            </div>
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
 
-            <!-- Education Item 2 -->
-            <div class="fade-in delay-2 bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md">
-                <div class="flex items-start">
-                    <div class="bg-blue-600 text-white p-3 rounded-full mr-4">
-                        <i class="fas fa-school"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-semibold dark:text-gray-200">Higher Secondary (12th)</h3>
-                        <p class="text-gray-600 dark:text-gray-300">Dnyanprassarak Mandal's P.V.S. Sarojini Madhusudan Kushe Higher Secondary School</p>
-                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">2021 - 2023</p>
-                        <p class="text-gray-600 dark:text-gray-300">Completed with Computer Science stream. Percentage: 71%</p>
-                        <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">Learned fundamentals of programming and computer applications</p>
-                    </div>
-                </div>
-            </div>
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-            <!-- Education Item 3 -->
-            <div class="fade-in delay-3 bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md">
-                <div class="flex items-start">
-                    <div class="bg-blue-600 text-white p-3 rounded-full mr-4">
-                        <i class="fas fa-book"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-semibold dark:text-gray-200">Secondary School (10th)</h3>
-                        <p class="text-gray-600 dark:text-gray-300">Dnyanprassarak Vidyalaya</p>
-                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">2021</p>
-                        <p class="text-gray-600 dark:text-gray-300">Completed with distinction. Percentage: 75%</p>
-                        <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">Developed strong foundation in mathematics and logical reasoning</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- certication
-<div class="mt-16 fade-in delay-4">
-            <h3 class="text-2xl font-semibold text-center mb-8 text-blue-600 dark:text-blue-400">Certifications</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md">
-                    <div class="flex items-center mb-4">
-                        <i class="fas fa-certificate text-3xl text-blue-500 dark:text-blue-400 mr-4"></i>
-                        <h4 class="text-lg font-medium dark:text-gray-200">Web Development Bootcamp</h4>
-                    </div>
-                    <p class="text-gray-600 dark:text-gray-300 mb-2">Udemy - 2023</p>
-                    <p class="text-sm text-gray-500 dark:text-gray-400">Completed comprehensive training in modern web development technologies including HTML5, CSS3, JavaScript, and React.</p>
-                </div>
-                <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md">
-                    <div class="flex items-center mb-4">
-                        <i class="fas fa-certificate text-3xl text-blue-500 dark:text-blue-400 mr-4"></i>
-                        <h4 class="text-lg font-medium dark:text-gray-200">Python Programming</h4>
-                    </div>
-                    <p class="text-gray-600 dark:text-gray-300 mb-2">Coursera - 2022</p>
-                    <p class="text-sm text-gray-500 dark:text-gray-400">Learned Python fundamentals, data structures, and algorithms through hands-on projects and assignments.</p>
-                </div>
-                <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md">
-                    <div class="flex items-center mb-4">
-                        <i class="fas fa-certificate text-3xl text-blue-500 dark:text-blue-400 mr-4"></i>
-                        <h4 class="text-lg font-medium dark:text-gray-200">Database Management</h4>
-                    </div>
-                    <p class="text-gray-600 dark:text-gray-300 mb-2">edX - 2022</p>
-                    <p class="text-sm text-gray-500 dark:text-gray-400">Gained expertise in database design, SQL queries, and database administration with MySQL.</p>
-                </div>
-            </div>
-        </div>-->
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-white">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-12 fade-in">Get In <span class="text-blue-600">Touch</span>
-            </h2>
-
-            <div class="flex flex-col md:flex-row gap-8">
-                <div class="md:w-1/2 fade-in delay-1">
-                    <h3 class="text-xl font-semibold mb-6 text-blue-600">Contact Information</h3>
-                    <p class="text-gray-600 mb-8">Feel free to reach out to me for any questions or opportunities. I'll
-                        get back to you as soon as possible!</p>
-
-                    <div class="space-y-6">
-                        <div class="flex items-start">
-                            <div class="bg-blue-100 p-3 rounded-full mr-4">
-                                <i class="fas fa-envelope text-blue-600"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-medium">Email</h4>
-                                <p class="text-gray-600">hemantpb123@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="bg-blue-100 p-3 rounded-full mr-4">
-                                <i class="fas fa-phone text-blue-600"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-medium">Phone</h4>
-                                <p class="text-gray-600">+91 9284494154</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="bg-blue-100 p-3 rounded-full mr-4">
-                                <i class="fas fa-map-marker-alt text-blue-600"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-medium">Location</h4>
-                                <p class="text-gray-600">Mapusa, Goa, India</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-8">
-                        <h4 class="font-medium mb-4">Follow Me</h4>
-                        <div class="flex space-x-4">
-                            <a href="https://www.linkedin.com/in/hemant-parasmal-borana-17a742289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                                class="bg-gray-100 hover:bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center transition">
-                                <i class="fab fa-linkedin-in text-blue-600"></i>
-                            </a>
-                            <a href="https://github.com/hemantborana"
-                                class="bg-gray-100 hover:bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center transition">
-                                <i class="fab fa-github text-blue-600"></i>
-                            </a>
-                            <a href="https://www.facebook.com/share/16o96MwNcJ/"
-                                class="bg-gray-100 hover:bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center transition">
-                                <i class="fab fa-facebook text-blue-600"></i>
-                            </a>
-                            <a href="https://www.instagram.com/hemant_borana_/"
-                                class="bg-gray-100 hover:bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center transition">
-                                <i class="fab fa-instagram text-blue-600"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="md:w-1/2 fade-in delay-2">
-                    <form id="contact-form" class="bg-gray-50 p-6 rounded-xl shadow-md dark:bg-gray-700">
-                        <div class="mb-4">
-                            <label for="name" class="block text-gray-700 dark:text-gray-300 font-medium mb-2">Your
-                                Name</label>
-                            <input type="text" id="name" name="name"
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-600 dark:border-gray-500 dark:text-white"
-                                placeholder="Enter your name" required>
-                        </div>
-                        <div class="mb-4">
-                            <label for="email" class="block text-gray-700 dark:text-gray-300 font-medium mb-2">Your
-                                Email</label>
-                            <input type="email" id="email" name="email"
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-600 dark:border-gray-500 dark:text-white"
-                                placeholder="Enter your email" required>
-                        </div>
-                        <div class="mb-4">
-                            <label for="subject"
-                                class="block text-gray-700 dark:text-gray-300 font-medium mb-2">Subject</label>
-                            <input type="text" id="subject" name="subject"
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-600 dark:border-gray-500 dark:text-white"
-                                placeholder="Enter subject" required>
-                        </div>
-                        <div class="mb-4">
-                            <label for="message" class="block text-gray-700 dark:text-gray-300 font-medium mb-2">Your
-                                Message</label>
-                            <textarea id="message" name="message" rows="5"
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-600 dark:border-gray-500 dark:text-white"
-                                placeholder="Enter your message" required></textarea>
-                        </div>
-                        <button type="submit"
-                            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-[1.02] active:scale-95">
-                            Send Message <i class="fas fa-paper-plane ml-2"></i>
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <span class="text-xl font-bold">Hemant Borana</span>
-                    <p class="text-gray-400 mt-1">Aspiring Data Analyst & BCA Final Year</p>
-                </div>
-                <div class="flex space-x-6">
-                    <a href="https://www.linkedin.com/in/hemant-parasmal-borana-17a742289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                        class="text-gray-400 hover:text-white transition">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://github.com/hemantborana" class="text-gray-400 hover:text-white transition">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.facebook.com/share/16o96MwNcJ/"
-                        class="text-gray-400 hover:text-white transition">
-                        <i class="fab fa-facebook"></i>
-                    </a>
-                    <a href="https://www.instagram.com/hemant_borana_/"
-                        class="text-gray-400 hover:text-white transition">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 Hemant Parasmal Borana. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-
-        // Initialize EmailJS
-        // Updated Contact Form Script - Place this at the bottom of your HTML, before closing </body> tag
-
-        document.addEventListener('DOMContentLoaded', function () {
-            // Initialize EmailJS with your public key
-            (function () {
-                emailjs.init('MR87pdkp-Hr9AcuQ1'); // Your public key
-
-                // Set up form handling after EmailJS is initialized
-                setTimeout(setupContactForm, 500); // Small delay to ensure initialization
-            })();
-
-
-        });
-
-        // Load EmailJS first, then initialize
-
-
-        function setupContactForm() {
-            const contactForm = document.getElementById('contact-form');
-
-            if (!contactForm) {
-                console.error('Contact form not found');
-                return;
-            }
-
-            contactForm.addEventListener('submit', function (event) {
-                event.preventDefault();
-
-                // Get form elements
-                const name = document.getElementById('name');
-                const email = document.getElementById('email');
-                const subject = document.getElementById('subject');
-                const message = document.getElementById('message');
-                const submitBtn = contactForm.querySelector('button[type="submit"]');
-
-                // Validate form
-                if (!validateForm(name, email, subject, message)) {
-                    return;
-                }
-
-                // Show loading state
-                showLoadingAnimation(submitBtn);
-
-                // Prepare template parameters
-                const templateParams = {
-                    name: name.value.trim(),
-                    email: email.value.trim(),
-                    subject: subject.value.trim(),
-                    message: message.value.trim(),
-                    to_name: 'Hemant Borana'
-                };
-
-                // Send email using EmailJS
-                emailjs.send('service_cky6mhg', 'template_j2p0d7h', templateParams)
-                    .then(function (response) {
-                        console.log('SUCCESS!', response.status, response.text);
-                        showSuccessAnimation(submitBtn);
-                        showMessage('Your message has been sent successfully!', 'success');
-                        contactForm.reset();
-
-                        // Reset button after animation
-                        setTimeout(() => {
-                            resetButton(submitBtn);
-                        }, 4000);
-                    }, function (error) {
-                        console.error('FAILED...', error);
-                        showErrorAnimation(submitBtn);
-                        showMessage('Failed to send message. Please try again or contact directly.', 'error');
-
-                        // Reset button after animation
-                        setTimeout(() => {
-                            resetButton(submitBtn);
-                        }, 3000);
-                    });
-            });
-        }
-
-
-
-
-        // Updated Email Validation Function
-        function validateForm(name, email, subject, message) {
-            // Clear previous errors
-            clearErrorMessages();
-
-            let isValid = true;
-
-            // Name validation
-            if (!name.value || name.value.trim().length < 2) {
-                showFieldError(name, 'Name must be at least 2 characters long');
-                isValid = false;
-            }
-
-            // Enhanced Email validation
-            const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-            if (!email.value || !emailRegex.test(email.value.trim())) {
-                showFieldError(email, 'Please enter a valid email address (e.g., example@domain.com)');
-                isValid = false;
-            }
-
-            // Subject validation
-            if (!subject.value || subject.value.trim().length < 5) {
-                showFieldError(subject, 'Subject must be at least 5 characters long');
-                isValid = false;
-            }
-
-            // Message validation
-            if (!message.value || message.value.trim().length < 10) {
-                showFieldError(message, 'Message must be at least 10 characters long');
-                isValid = false;
-            }
-
-            return isValid;
-        }
-
-        function showFieldError(field, message) {
-            // Remove any existing error classes
-            field.classList.remove('border-red-500', 'focus:ring-red-500');
-
-            // Add error styling
-            field.classList.add('border-red-500', 'focus:ring-red-500');
-
-            // Create or update error message
-            let errorElement = field.nextElementSibling;
-            if (!errorElement || !errorElement.classList.contains('field-error')) {
-                errorElement = document.createElement('div');
-                errorElement.className = 'text-red-500 text-sm mt-1 field-error';
-                field.parentNode.insertBefore(errorElement, field.nextSibling);
-            }
-            errorElement.textContent = message;
-        }
-
-        // Updated clearErrorMessages function
-        function clearErrorMessages() {
-            // Remove error styling from all fields
-            document.querySelectorAll('.border-red-500').forEach(field => {
-                field.classList.remove('border-red-500', 'focus:ring-red-500');
-            });
-
-            // Remove all error messages
-            document.querySelectorAll('.field-error').forEach(error => {
-                error.remove();
-            });
-
-            // Remove general message if exists
-            const existingMessage = document.querySelector('.form-message');
-            if (existingMessage) {
-                existingMessage.remove();
-            }
-        }
-
-        function showMessage(text, type) {
-            // Remove existing message
-            const existingMessage = document.querySelector('.form-message');
-            if (existingMessage) {
-                existingMessage.remove();
-            }
-
-            // Create new message
-            const messageDiv = document.createElement('div');
-            messageDiv.className = `form-message p-4 rounded-lg mb-4 ${type === 'success' ? 'bg-green-100 text-green-800 border border-green-300' : 'bg-red-100 text-red-800 border border-red-300'}`;
-            messageDiv.innerHTML = `
-        <div class="flex items-center">
-            <i class="fas ${type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle'} mr-2"></i>
-            <span>${text}</span>
-        </div>
-    `;
-
-            // Insert message at the top of the form
-            const form = document.getElementById('contact-form');
-            form.insertBefore(messageDiv, form.firstChild);
-
-            // Auto-remove success message after 5 seconds
-            if (type === 'success') {
-                setTimeout(() => {
-                    if (messageDiv.parentNode) {
-                        messageDiv.remove();
-                    }
-                }, 5000);
-            }
-        }
-
-        function showLoadingAnimation(btn) {
-            btn.disabled = true;
-            btn.style.position = 'relative';
-            btn.style.overflow = 'hidden';
-
-            // Create loading wave effect
-            const wave = document.createElement('div');
-            wave.className = 'loading-wave';
-            wave.style.cssText = `
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-        animation: wave 1.5s infinite;
-        z-index: 1;
-    `;
-
-            // Add wave animation keyframes
-            if (!document.getElementById('wave-animation')) {
-                const style = document.createElement('style');
-                style.id = 'wave-animation';
-                style.textContent = `
-            @keyframes wave {
-                0% { left: -100%; }
-                100% { left: 100%; }
-            }
-            @keyframes pulse {
-                0%, 100% { transform: scale(1); }
-                50% { transform: scale(1.05); }
-            }
-            @keyframes shake {
-                0%, 100% { transform: translateX(0); }
-                25% { transform: translateX(-5px); }
-                75% { transform: translateX(5px); }
-            }
-            @keyframes bounce {
-                0%, 100% { transform: translateY(0); }
-                50% { transform: translateY(-10px); }
-            }
-            @keyframes checkmark {
-                0% { stroke-dashoffset: 100; }
-                100% { stroke-dashoffset: 0; }
-            }
-        `;
-                document.head.appendChild(style);
-            }
-
-            btn.appendChild(wave);
-            btn.innerHTML = `
-        <span style="position: relative; z-index: 2;">
-            Sending
-            <span class="loading-dots">
-                <span style="animation: bounce 1.4s infinite; animation-delay: 0s;">.</span>
-                <span style="animation: bounce 1.4s infinite; animation-delay: 0.2s;">.</span>
-                <span style="animation: bounce 1.4s infinite; animation-delay: 0.4s;">.</span>
-            </span>
-        </span>
-    `;
-
-            // Add pulse effect to button
-            btn.style.animation = 'pulse 2s infinite';
-        }
-
-        // Update social media links
-
-
-
-        function showSuccessAnimation(btn) {
-            // Remove loading elements
-            const wave = btn.querySelector('.loading-wave');
-            if (wave) wave.remove();
-
-            // Stop pulse animation
-            btn.style.animation = 'none';
-
-            // Create success checkmark SVG
-            const checkmark = `
-        <svg width="20" height="20" viewBox="0 0 20 20" style="display: inline-block; margin-left: 8px;">
-            <path d="M3 10l4 4 10-10" stroke="white" stroke-width="2" fill="none" 
-                  stroke-linecap="round" stroke-linejoin="round"
-                  stroke-dasharray="100" stroke-dashoffset="100"
-                  style="animation: checkmark 0.6s ease-in-out forwards;"/>
-        </svg>
-    `;
-
-            // Success state with smooth color transition
-            btn.style.transition = 'all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55)';
-            btn.style.background = 'linear-gradient(45deg, #10b981, #059669)';
-            btn.style.transform = 'scale(1.05)';
-            btn.style.boxShadow = '0 10px 30px rgba(16, 185, 129, 0.4)';
-
-            // Update button content with typewriter effect
-            setTimeout(() => {
-                btn.innerHTML = `
-            <span style="display: inline-flex; align-items: center;">
-                <span class="success-text">Message Sent!</span>
-                ${checkmark}
-            </span>
-        `;
-
-                // Add typewriter effect to success text
-                const successText = btn.querySelector('.success-text');
-                const text = successText.textContent;
-                successText.textContent = '';
-
-                let i = 0;
-                const typeWriter = setInterval(() => {
-                    if (i < text.length) {
-                        successText.textContent += text.charAt(i);
-                        i++;
-                    } else {
-                        clearInterval(typeWriter);
-                    }
-                }, 50);
-
-            }, 200);
-
-            // Add celebration particles
-            createParticles(btn);
-
-            // Reset scale after animation
-            setTimeout(() => {
-                btn.style.transform = 'scale(1)';
-            }, 600);
-        }
-
-        function showErrorAnimation(btn) {
-            // Remove loading elements
-            const wave = btn.querySelector('.loading-wave');
-            if (wave) wave.remove();
-
-            // Stop pulse animation
-            btn.style.animation = 'none';
-
-            // Error state with shake animation
-            btn.style.transition = 'all 0.3s ease';
-            btn.style.background = 'linear-gradient(45deg, #ef4444, #dc2626)';
-            btn.style.animation = 'shake 0.6s ease-in-out';
-
-            btn.innerHTML = `
-        <span style="display: inline-flex; align-items: center;">
-            Failed to Send
-            <i class="fas fa-exclamation-triangle ml-2" style="animation: pulse 1s infinite;"></i>
-        </span>
-    `;
-
-            // Remove shake animation after completion
-            setTimeout(() => {
-                btn.style.animation = 'none';
-            }, 600);
-        }
-
-        function createParticles(btn) {
-            const rect = btn.getBoundingClientRect();
-            const particleCount = 15;
-
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.style.cssText = `
-            position: fixed;
-            width: 4px;
-            height: 4px;
-            background: #10b981;
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 9999;
-            left: ${rect.left + rect.width / 2}px;
-            top: ${rect.top + rect.height / 2}px;
-            animation: particle-${i} 1s ease-out forwards;
-        `;
-
-                // Create unique animation for each particle
-                const angle = (i / particleCount) * Math.PI * 2;
-                const distance = 50 + Math.random() * 30;
-                const endX = Math.cos(angle) * distance;
-                const endY = Math.sin(angle) * distance;
-
-                const keyframes = `
-            @keyframes particle-${i} {
-                0% {
-                    transform: translate(0, 0) scale(1);
-                    opacity: 1;
-                }
-                100% {
-                    transform: translate(${endX}px, ${endY}px) scale(0);
-                    opacity: 0;
-                }
-            }
-        `;
-
-                const style = document.createElement('style');
-                style.textContent = keyframes;
-                document.head.appendChild(style);
-
-                document.body.appendChild(particle);
-
-                // Remove particle after animation
-                setTimeout(() => {
-                    particle.remove();
-                    style.remove();
-                }, 1000);
-            }
-        }
-
-        function resetButton(submitBtn) {
-            // Smooth transition back to original state
-            submitBtn.style.transition = 'all 0.5s ease';
-            submitBtn.style.background = '';
-            submitBtn.style.transform = 'scale(1)';
-            submitBtn.style.boxShadow = '';
-
-            submitBtn.innerHTML = `
-        Send Message 
-        <i class="fas fa-paper-plane ml-2" style="transition: transform 0.3s ease;"></i>
-    `;
-
-            submitBtn.classList.remove('bg-green-500', 'hover:bg-green-600', 'bg-red-500', 'hover:bg-red-600');
-            submitBtn.classList.add('bg-blue-600', 'hover:bg-blue-700');
-            submitBtn.disabled = false;
-
-            // Add hover effect for paper plane icon
-            submitBtn.addEventListener('mouseenter', function () {
-                const icon = this.querySelector('.fa-paper-plane');
-                if (icon) icon.style.transform = 'translateX(5px) rotate(15deg)';
-            });
-
-            submitBtn.addEventListener('mouseleave', function () {
-                const icon = this.querySelector('.fa-paper-plane');
-                if (icon) icon.style.transform = 'translateX(0) rotate(0)';
-            });
-        }
-
-        // Theme toggle functionality
-        const themeToggle = document.getElementById('theme-toggle');
-        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-
-        // Check for saved theme preference or use system preference
-        const currentTheme = localStorage.getItem('theme') ||
-            (prefersDarkScheme.matches ? 'dark' : 'light');
-
-        if (currentTheme === 'dark') {
-            document.documentElement.classList.add('dark');
-        }
-
-        themeToggle.addEventListener('click', function () {
-            const html = document.documentElement;
-            html.classList.toggle('dark');
-
-            const newTheme = html.classList.contains('dark') ? 'dark' : 'light';
-            localStorage.setItem('theme', newTheme);
-        });
-
-        // Mobile menu toggle
-        document.getElementById('menu-btn').addEventListener('click', function () {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
-        });
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-
-                // Close mobile menu if open
-                document.getElementById('mobile-menu').classList.add('hidden');
-
-                // Update active nav link
-                document.querySelectorAll('.nav-link').forEach(link => {
-                    link.classList.remove('active');
-                });
-                this.classList.add('active');
-
-                // Scroll to section
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 70,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Update active nav link on scroll
-        window.addEventListener('scroll', function () {
-            const scrollPosition = window.scrollY;
-
-            document.querySelectorAll('section').forEach(section => {
-                const sectionTop = section.offsetTop - 100;
-                const sectionHeight = section.offsetHeight;
-                const sectionId = section.getAttribute('id');
-
-                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                    document.querySelectorAll('.nav-link').forEach(link => {
-                        link.classList.remove('active');
-                        if (link.getAttribute('href') === `#${sectionId}`) {
-                            link.classList.add('active');
-                        }
-                    });
-                }
-            });
-        });
-
-        // Add fade-in animation to elements when they come into view
-        const fadeElements = document.querySelectorAll('.fade-in');
-
-        const fadeInObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('opacity-100');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        fadeElements.forEach(element => {
-            element.classList.add('opacity-0');
-            fadeInObserver.observe(element);
-        });
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </body>
 
 </html>
