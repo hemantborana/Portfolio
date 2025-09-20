@@ -340,9 +340,8 @@ const projectData = {
       { text: "Source Code", url: "https://github.com/hemantborana/Retail-Supermarket-Analytics", type: "secondary", icon: "logo-github" }
     ]
   },
-
-    hrea: {
-    title: "HR Employee Attrition Analytics",
+  hrea: {
+    title: "HR Attrition Analysis Excel",
     category: "Business Analytics",
     image: "./assests/images/project-hrea.png",
     description: "A comprehensive data analytics project focused on understanding employee attrition patterns and predicting workforce turnover using advanced Excel techniques including pivot tables, regression analysis, and interactive dashboards. Analyzed 1,470 employee records across 36 variables to identify key factors contributing to workforce turnover and provide actionable insights for HR decision-making.",
@@ -350,6 +349,17 @@ const projectData = {
     links: [
       { text: "Dashboard Preview", url: "https://github.com/hemantborana/HR-Employee-Attrition-Analysis/blob/main/screenshots/Dashboard_overview.png", type: "primary", icon: "analytics-outline" },
       { text: "Source Code", url: "https://github.com/hemantborana/HR-Employee-Attrition-Analysis", type: "secondary", icon: "logo-github" }
+    ]
+  },
+  hraml: {
+    title: "HR Attrition Analysis - ML Python",
+    category: "Data Science",
+    image: "./assests/images/project-hraml.png",
+    description: "A comprehensive data analytics and machine learning project focused on understanding employee attrition patterns using Python and Jupyter Notebook. Employed advanced statistical analysis, data visualization techniques, and predictive modeling to analyze 1,470 employee records across 35+ variables. Created interactive visualizations and derived actionable insights for HR decision-making using pandas, matplotlib, seaborn, and plotly libraries.",
+    techStack: ["Python", "Jupyter Notebook", "pandas", "matplotlib", "seaborn", "plotly", "Machine Learning"],
+    links: [
+      { text: "Jupyter Notebook", url: "https://github.com/hemantborana/HR-Attrition-Analysis-ML-Python/blob/main/notebooks/employee_attrition_analysis.ipynb", type: "primary", icon: "analytics-outline" },
+      { text: "Source Code", url: "https://github.com/hemantborana/HR-Attrition-Analysis-ML-Python", type: "secondary", icon: "logo-github" }
     ]
   }
 };
