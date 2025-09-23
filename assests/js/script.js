@@ -329,6 +329,19 @@ const projectData = {
       { text: "Source Code", url: "https://github.com/hemantborana/D-OMS", type: "secondary", icon: "logo-github" }
     ]
   },
+  edss: {
+    title: "Enterprise DMS Sales Report Scraper",
+    category: "Data Science",
+    image: "./assests/images/project-edss.png",
+    description: "An automated web scraping solution for extracting and analyzing sales data from enterprise DMS platforms, featuring comprehensive reporting with email notifications and multiple export formats. Successfully deployed in production environments for over 2 months with proven business reliability. Built with Python Selenium for robust data extraction, automated login & navigation, multi-page data handling, and party-wise data consolidation with target tracking.",
+    techStack: ["Python", "Selenium", "Web Scraping", "Data Analysis", "Automated Reporting", "Email Notifications", "CSV/JSON/PDF Export"],
+    links: [
+      { text: "Main Script", url: "https://github.com/hemantborana/enterprise-sales-data-extractor/blob/main/dms_scraper.py", type: "primary", icon: "code-outline" },
+      { text: "Config File", url: "https://github.com/hemantborana/enterprise-sales-data-extractor/blob/main/config.py", type: "secondary", icon: "settings-outline" },
+      { text: "Sample Output", url: "https://github.com/hemantborana/enterprise-sales-data-extractor/blob/main/sample_outputs/mail_sample.pdf", type: "secondary", icon: "document-outline" },
+      { text: "Source Code", url: "https://github.com/hemantborana/enterprise-sales-data-extractor", type: "secondary", icon: "logo-github" }
+    ]
+  },
   rssa: {
     title: "Retail Supermarket Sales & Profit Analysis",
     category: "Business Analytics",
