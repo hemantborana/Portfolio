@@ -374,7 +374,19 @@ const projectData = {
       { text: "Jupyter Notebook", url: "https://github.com/hemantborana/HR-Attrition-Analysis-ML-Python/blob/main/notebooks/employee_attrition_analysis.ipynb", type: "primary", icon: "analytics-outline" },
       { text: "Source Code", url: "https://github.com/hemantborana/HR-Attrition-Analysis-ML-Python", type: "secondary", icon: "logo-github" }
     ]
-  }
+  },
+rsfs: {
+  title: "Retail Sales Forecasting System - ML",
+  category: "Data Science",
+  image: "./assests/images/project-rsfs.png",
+  description: "Advanced machine learning system for retail demand prediction developed during TCS iON RIO 125 internship. Analyzed 200,000 records across 4 years (2020-2023) using Gradient Boosting algorithm to achieve 99.41% R² accuracy and 3.44% MAPE. Features comprehensive data pipeline from generation to forecasting, seasonal pattern analysis, risk assessment, and business recommendations for inventory optimization and procurement planning.",
+  techStack: ["Python", "Scikit-learn", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Jupyter Notebook", "Gradient Boosting", "Time Series Analysis"],
+  links: [
+    { text: "Jupyter Notebook", url: "https://github.com/hemantborana/TCS-iON-RIO-Retail-Sales-Forecasting/blob/main/retail_sales_forecasting_system.ipynb", type: "primary", icon: "analytics-outline" },
+    { text: "Source Code", url: "https://github.com/hemantborana/TCS-iON-RIO-Retail-Sales-Forecasting", type: "secondary", icon: "logo-github" },
+    { text: "Video Explanation", url: "https://github.com/hemantborana/TCS-iON-RIO-Retail-Sales-Forecasting/blob/main/presentation/TSC%20iON%20RIO%20Project%20Explanation.mp4", type: "secondary", icon: "play-outline" }
+  ]
+}
 };
 
 // Project Modal Functionality
