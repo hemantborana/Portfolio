@@ -460,16 +460,22 @@
           </div>
 
           <ol class="timeline-list">
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Data Analytics Intern</h4>
-              <span>Jul 2025 — Sep 2025</span>
-              <p class="timeline-text">
-                Completed TCS iON RiO-125, a 125-hour industry internship program focused on retail demand forecasting
-                and data analytics. Worked on projects involving forecasting systems and analyzing historical data to
-                predict product demand at retail outlets. Gained hands-on experience with data analysis tools while
-                receiving guidance from industry mentors.
-              </p>
-            </li>
+            <<li class="timeline-item">
+  <h4 class="h4 timeline-item-title">Data Analytics Intern</h4>
+  <span>Jul 2025 — Sep 2025</span>
+  <p class="timeline-text">
+    Completed TCS iON RiO-125, a 125-hour industry internship program focused on retail demand forecasting
+    and data analytics. Worked on projects involving forecasting systems and analyzing historical data to
+    predict product demand at retail outlets. Gained hands-on experience with data analysis tools while
+    receiving guidance from industry mentors.
+  </p>
+  
+  <!-- Certificate Image Section -->
+  <div class="certificate-container">
+    <img src="/assests/images/tcs-ion-certificate.jpg" alt="TCS iON RiO-125 Certificate" class="certificate-img" onclick="openModal(this)">
+    <p class="certificate-label">TCS iON RiO-125 Completion Certificate</p>
+  </div>
+</li>
 
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">Family Business Support (Part-time)</h4>
@@ -483,6 +489,14 @@
             </li>
           </ol>
         </section>
+
+        <!-- Modal for Full-size Certificate View -->
+<div id="certificateModal" class="modal" onclick="closeModal()">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImg">
+  <div class="caption" id="caption"></div>
+</div>
+
 
         <section class="skill">
           <h3 class="h3 skills-title">My skills</h3>

@@ -317,6 +317,28 @@ function resetButtonState(btn) {
     btn.style.opacity = '';
 }
 
+function openModal(img) {
+  const modal = document.getElementById("certificateModal");
+  const modalImg = document.getElementById("modalImg");
+  const caption = document.getElementById("caption");
+  
+  modal.style.display = "block";
+  modalImg.src = img.src;
+  caption.innerHTML = img.alt;
+}
+
+function closeModal() {
+  document.getElementById("certificateModal").style.display = "none";
+}
+
+// Close modal with Escape key
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') {
+    closeModal();
+  }
+});
+
+
 const projectData = {
   doms: {
     title: "Distributor Order Management – with Analytics",
