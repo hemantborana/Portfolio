@@ -338,8 +338,19 @@ document.addEventListener('keydown', function(event) {
   }
 });
 
-
 const projectData = {
+  cnms: {
+    title: "CN Management System - PWA",
+    category: "Business Automation",
+    image: "./assests/images/project-cnms.png",
+    description: "A comprehensive Progressive Web App for automated credit note management with Google Workspace integration. Built in just 2 days using AI assistance and successfully deployed in production. Features automated PDF generation, email automation, WhatsApp integration, cloud storage, offline support, and real-time analytics. Seamlessly integrates with Google Sheets, Drive, Gmail, and Firebase for complete workflow automation from CN creation to distribution and tracking.",
+    techStack: ["React", "TypeScript", "Firebase", "Google Apps Script", "Tailwind CSS", "PWA", "IndexedDB", "Google Workspace APIs"],
+    links: [
+      { text: "Project Overview", url: "https://hemantborana.github.io/credit-note-automation-app/project.html", type: "primary", icon: "open-outline" },
+      { text: "Setup Guide", url: "https://github.com/hemantborana/credit-note-automation-app/blob/main/SETUP.md", type: "secondary", icon: "document-outline" },
+      { text: "Source Code", url: "https://github.com/hemantborana/credit-note-automation-app", type: "secondary", icon: "logo-github" }
+    ]
+  },
   doms: {
     title: "Distributor Order Management – with Analytics",
     category: "Full-Stack Web Dev",
@@ -397,19 +408,19 @@ const projectData = {
       { text: "Source Code", url: "https://github.com/hemantborana/HR-Attrition-Analysis-ML-Python", type: "secondary", icon: "logo-github" }
     ]
   },
-rsfs: {
-  title: "Retail Sales Forecasting System - ML",
-  category: "Data Science",
-  image: "./assests/images/project-rsfs.png",
-  description: "Advanced machine learning system for retail demand prediction developed during TCS iON RIO 125 internship. Analyzed 200,000 records across 4 years (2020-2023) using Gradient Boosting algorithm to achieve 99.41% R² accuracy and 3.44% MAPE. Features comprehensive data pipeline from generation to forecasting, seasonal pattern analysis, risk assessment, and business recommendations for inventory optimization and procurement planning.",
-  techStack: ["Python", "Scikit-learn", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Jupyter Notebook", "Gradient Boosting", "Time Series Analysis"],
-  links: [
-    { text: "Jupyter Notebook", url: "https://github.com/hemantborana/TCS-iON-RIO-Retail-Sales-Forecasting/blob/main/retail_sales_forecasting_system.ipynb", type: "primary", icon: "analytics-outline" },
-    { text: "Source Code", url: "https://github.com/hemantborana/TCS-iON-RIO-Retail-Sales-Forecasting", type: "secondary", icon: "logo-github" },
-    { text: "Video Explanation", url: "https://github.com/hemantborana/TCS-iON-RIO-Retail-Sales-Forecasting/blob/main/presentation/TSC%20iON%20RIO%20Project%20Explanation.mp4", type: "secondary", icon: "play-outline" }
-  ]
-}
-};
+  rsfs: {
+    title: "Retail Sales Forecasting System - ML",
+    category: "Data Science",
+    image: "./assests/images/project-rsfs.png",
+    description: "Advanced machine learning system for retail demand prediction developed during TCS iON RIO 125 internship. Analyzed 200,000 records across 4 years (2020-2023) using Gradient Boosting algorithm to achieve 99.41% R² accuracy and 3.44% MAPE. Features comprehensive data pipeline from generation to forecasting, seasonal pattern analysis, risk assessment, and business recommendations for inventory optimization and procurement planning.",
+    techStack: ["Python", "Scikit-learn", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Jupyter Notebook", "Gradient Boosting", "Time Series Analysis"],
+    links: [
+      { text: "Jupyter Notebook", url: "https://github.com/hemantborana/TCS-iON-RIO-Retail-Sales-Forecasting/blob/main/retail_sales_forecasting_system.ipynb", type: "primary", icon: "analytics-outline" },
+      { text: "Source Code", url: "https://github.com/hemantborana/TCS-iON-RIO-Retail-Sales-Forecasting", type: "secondary", icon: "logo-github" },
+      { text: "Video Explanation", url: "https://github.com/hemantborana/TCS-iON-RIO-Retail-Sales-Forecasting/blob/main/presentation/TSC%20iON%20RIO%20Project%20Explanation.mp4", type: "secondary", icon: "play-outline" }
+    ]
+  }
+};  
 
 // Project Modal Functionality
 const projectModalContainer = document.querySelector('[data-project-modal-container]');
